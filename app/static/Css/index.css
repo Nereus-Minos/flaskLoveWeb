@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+
+/*********head的文字转换**********/
+
+/********head的文字转换**********/
+
+
+/**********滑动条***********/
+/*.suofang {
+    z-index:9999;
+    background-color:green;
+    width:20px;
+    height:200px;
+    cursor:pointer;
+    color:white;
+    text-align:center;
+    line-height:30px;
+    float:right;
+    margin: 25px auto 0px auto;
+}*/
+
+
+.bigbox {
+    position: absolute;
+    right: 0;
+    z-index:9999;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+	.bigbox{margin-right: 0px;}
+}
+
+/*容器高度*/
+.scroll_con{
+    float:right;
+    background-color: #82a6f5;
+    width:256px;
+    height:400px;
+    border:0px solid #f6d6ff;
+    margin:-580px 200px 0 auto;
+    position:relative;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+/*文本实际高度*/
+.paragraph{
+    width:250px;
+    position:absolute;
+    left:-20px;
+    top:0;
+    font-size:14px;
+    font-family:'Microsoft Yahei';
+    line-height:32px;
+    text-indent:2em;
+}
+
+.paragraph h1{
+	font-size: 20px;
+}
+.paragraph h4{
+	font-size: 16px;
+}
+.paragraph 	h4{
+	color:#f6d6ff;
+}
+.paragraph 	h1{
+	color:yellow;
+}
+
+.paragraph 	h4:hover{
+			color:cyan;
+}
+.paragraph 	h1:hover{
+			color:cyan;
+}
+/**********滑动条***********/
+
+
+/**********图片切换***********/
+/*#clock-box {
+    //background-image: url(../images/index/2.png), url(../images/index/1.png);
+    //background-repeat:no-repeat, no-repeat;
+    //background-position:center top,center top;
+    width: 100%;
+    height: 400px;
+    background-size: 400px 100%, 500px 100%;
+    text-align: center;
+}*/
+
+#time_img1 {
+    width: 50%;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, -20%);     //50%为自身尺寸的一半
+}
+
+#time_img2 {
+    width: 50%;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+/**********图片切换***********/
+
+
+
+
+
+

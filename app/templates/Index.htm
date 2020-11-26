@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html style='max-width:100%;overflow:auto;overflow-x:hidden;overflow-y:auto;height:100%;-webkit-overflow-scrolling: touch;box-sizing:border-box;'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我和他的小爱情</title>
+    <link href="/static/Css/screen.css" rel="stylesheet" type="text/css" >
+    <link href="/static/Css/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/static/Css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/Css/daohangtiao.css">
+	<link rel="stylesheet" type="text/css" href="/static/Css/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/Css/flex.css">
+
+	<link rel="stylesheet" type="text/css" href="/static/package/css/swiper.min.css">
+
+
+    <script type="text/javascript" src="/static/Js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/Js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/package/js/swiper.min.js"></script>
+
+
+	<!-- 底部向上箭头 -->
+	<script type="text/javascript">
+		$(function(){
+			$totop = $('.totop');
+			$(window).scroll(function(){
+				var iNum = $(document).scrollTop();
+				if(iNum>200){
+					$totop.fadeIn();
+				}
+				else
+				{
+					$totop.fadeOut();
+				}
+			})
+			$totop.click(function(){
+				$('html,body').animate({'scrollTop':0});
+			})
+		})
+	</script>
+	<!-- 底部向上箭头 -->
+
+	<!--时间表-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/mb-comingsoon-iceberg.css">
+    <script type="text/javascript" src="/static/Js/jquery.mb-comingsoon.min.js"></script>
+	    <script type="text/javascript">
+        $(function () {
+			<!--  new Date(year, month, day, hours, minutes, seconds, milliseconds);-->
+            $('#myCounter').mbComingsoon({ expiryDate: new Date(2018, 9, 1, 9, 0), speed:100 });
+			 setTimeout(function () {
+                $(window).resize();
+            }, 1000);
+        })
+    </script>
+	<!--时间表-->
+
+	<!--图片切换-->
+	<script>
+
+<!--		var Imgnum = 2;-->
+<!--		var inouttime = 1;-->
+<!--		var changePeriod=3;-->
+<!--		var steps = 30;-->
+<!--		var i;var j;-->
+<!--		var Period = inouttime / steps;-->
+<!--		var changeValue= Period/inouttime;-->
+
+<!--		function Randompick() {-->
+<!--			i = Math.floor(Math.random() * Imgnum) + 1;-->
+<!--			while ($('#time_img' + i).css('opacity') == '1')-->
+<!--				i = Math.floor(Math.random() * Imgnum) + 1;-->
+<!--			return i;-->
+<!--		}-->
+
+<!--		function RandomStart() {-->
+<!--			i = Randompick();-->
+<!--			$('#time_img' + i).css('opacity', 1);-->
+<!--		}-->
+
+<!--		function Min(i, j) {-->
+<!--			if (i > j)-->
+<!--				return j;-->
+<!--			else return i;-->
+<!--		}-->
+
+<!--		function Max(i, j) {-->
+<!--			if (i > j)-->
+<!--				return i;-->
+<!--			else return j;-->
+<!--		}-->
+<!--		function Fadeinout()-->
+<!--		{-->
+<!--			$('#time_img' + i).css('opacity', Min(parseFloat($('#time_img' + i).css('opacity')) + changeValue, 1));-->
+<!--			$('#time_img' + j).css('opacity', Max(parseFloat($('#time_img' + j).css('opacity')) - changeValue, 0.0));-->
+<!--			//console.log($('#img' + i).css('opacity'));-->
+<!--			//console.log($('#img' + j).css('opacity'));-->
+<!--			if(($('#time_img' + i).css('opacity')==0.5)&&($('#time_img' + j).css('opacity')==0))-->
+<!--			{-->
+<!--				//alert('abort');-->
+<!--				$('#time_img'+i).css('opacity',1);-->
+<!--				$('#time_img'+j).css('opacity',0);-->
+<!--				return;-->
+<!--			}-->
+<!--			setTimeout("Fadeinout()",Period*1000);-->
+<!--		}-->
+<!--		function RandomChange() {-->
+<!--			i = Randompick();-->
+<!--			// i fade in, j fade out-->
+<!--			for (j = 1; j <= Imgnum; j++) {-->
+<!--				if ($('#time_img' + j).css('opacity') == '1')-->
+<!--					break;-->
+<!--			}-->
+<!--			Fadeinout();-->
+<!--		}-->
+<!--		setTimeout('RandomStart()',0);-->
+<!--		setInterval('RandomChange()',changePeriod*1000);-->
+    </script>
+	<!--图片切换-->
+	<script type="text/javascript">
+<!--		new Swiper(".swiper-container", {-->
+<!--            direction: 'horizontal', //默认horizontal, 水平轮播-->
+<!--            autoplay: true,   //自动切换-->
+<!--            loop: true,  //循环-->
+<!--            slidesPerView: "auto",  //默认1, 同时显示的slides数量,auto 代表根据轮播图的宽度排列-->
+<!--            spaceBetween: 30, //轮播图之间的间距-->
+<!--        })-->
+	</script>
+	<script type="text/javascript">
+<!--	$(function(){-->
+<!--		var dnum = 0;-->
+<!--		$(".bigbox").css({left: $(".bigbox").offset().left + $(".scroll_con").outerWidth(true)});-->
+<!--		$(".suofang").click(function() {-->
+<!--			dnum = dnum + 1;-->
+<!--			if (dnum % 2 == 0) {-->
+<!--				$(".bigbox").animate({-->
+<!--					left: $(".bigbox").offset().left + $(".scroll_con").outerWidth(true)-->
+<!--				}, 500)-->
+<!--			} else {-->
+<!--				$(".bigbox").stop(true, true).animate({-->
+<!--					left: $(".bigbox").offset().left - $(".scroll_con").outerWidth(true)-->
+<!--				}, 500)-->
+<!--			}-->
+<!--		})-->
+<!--	})-->
+
+	$(function(){
+		var dnum = 0;
+		$(".scroll_con").css({width:0});
+		$(".suofang").click(function() {
+			dnum = dnum + 1;
+			if (dnum % 2 != 0) {
+<!--				$(".suofang").css("margin-right","0px");-->
+				$(".scroll_con").animate({
+					width:256
+				}, 500)
+				$(".zitiqiehuan1").html("可");
+				$(".zitiqiehuan2").html("收");
+				$(".zitiqiehuan3").html("起");
+			} else {
+
+				$(".scroll_con").stop(true, true).animate({
+					width:0
+				}, 500)
+				$(".zitiqiehuan1").html("有");
+				$(".zitiqiehuan2").html("惊");
+				$(".zitiqiehuan3").html("喜");
+
+<!--				setTimeout(function () {$(".suofang").css("margin-right","15px");}, 500);-->
+			}
+		})
+	})
+
+	</script>
+
+
+<!--	文字转换-->
+	<script src="/static/Js/responsiveslides.min.js"></script>
+		<script>
+				$(function () {
+					 var w = $(window).width();
+					$('.slider-info').css('width', w);
+
+					$("#slider").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 1000,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+<!--	文字转换-->
+</head>
+
+
+
+
+<body style='max-width:100%;overflow:auto;overflow-x:hidden;overflow-y:auto;height:100%;-webkit-overflow-scrolling: touch;box-sizing:border-box;'>
+	<!-- 导航条 -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<!-- 定义logo和切换小图标   -->
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="javascript:;" class="navbar-brand">
+					<img src="/static/images/爱的图标2.jpg" >
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="mymenu">
+				<!-- 定义菜单   -->
+				<ul class="nav navbar-nav">
+					<li class="active "><a href="javascript:;">首页</a></li>
+					<li><a href="/timeMan/">时间先生</a></li>
+					<li><a href="/story/">爱情故事</a></li>
+					<li><a href="/letter/">三行情书</a></li>
+					<li><a href="/youme/">小小合照</a></li>
+					<li><a href="/loveWords/0/">每日情话</a></li>
+					<li><a href="/Comments/">送上祝福</a></li>
+				</ul>
+	        </div>
+		</div>
+	</div>
+	<!-- 导航条 -->
+
+    <!--前半部分-->
+   <header >
+	   		<!-- 中间文本滑动条 -->
+		<div class='bigbox'>
+
+			<div class='suofang biaobai' style="width:30px;float:left; margin-top: 30px; z-index:1000; background-color:#0090CE; cursor:pointer;">
+					<div style="text-align:center">》</div>
+					<div>点</div>
+					<div>击</div>
+					<div class="zitiqiehuan1">有</div>
+					<div class="zitiqiehuan2">惊</div>
+					<div class="zitiqiehuan3">喜</div>
+					<div>哦</div>
+					<div style="text-align:center">！</div>
+				</div>
+
+
+		 <!-- 容器高度 -->
+			<div class="scroll_con" >
+				<!-- 文本实际高度 -->
+				<div class="paragraph"  id="wrap">
+
+					<h1 >
+						愿得一心人，白首不分离</h1>
+					<h4>
+						陪伴，是最长情的告白</h4>
+					<h4>
+						你问过
+					</h4>
+					<h4>
+						我爱你，能坚持多长时间</h4>
+					<h4>
+						我说过</h4>
+					<h4>
+						我爱你，是永远</h4>
+					<h4>
+						你问过
+					</h4>
+					<h4>
+						永远是多久呢</h4>
+					<h4>
+						我说过</h4>
+					<h4>
+						永远就是比时间多那么一秒</h4>
+
+					<h4>
+						喜欢一座城，因为一个人</h4>
+					<h4>
+						恋上一座城，因为一颗心</h4>
+					<h4>
+						留在一座城，因为一份爱</h4>
+
+
+					<h4>
+						爱，
+					</h4>
+					<h4>
+						就是我们的家
+					</h4>
+
+					<h4>
+						幸福，
+					</h4>
+					<h4>
+						就是在偌大的城市
+					</h4>
+					<h4>
+						用两双眼睛
+					</h4>
+					<h4>
+						看一个未来
+					</h4>
+					<h4>
+						在这里</h4>
+					<h4>
+						真的很感谢各位小伙伴</h4>
+					<h4>
+						感谢你们对我和小月月的支持</h4>
+					<h4>
+						还帮忙撮合我俩</h4>
+					<h4>
+						更谢谢你们曾经</h4>
+					<h4>
+						陪着小月月，还有我一路走来</h4>
+					<h4>
+						欢歌笑语 风雨兼程</h4>
+					<h4>
+						未来的日子</h4>
+					<h4>
+						依旧有你们相伴
+					</h4>
+					<h4>
+						以后的岁月
+					</h4>
+					<h4>
+						小月月</h4>
+					<h4>
+						由我护航 定不辜负</h4>
+					<h4>
+						感恩 一路同行</h4>
+
+					<h1>我永远都是爱你的大傻子</h1>
+				</div>
+			</div>
+			 <!-- 中间文本滑动条 -->
+<!--			<div class="suofang biaobai">-->
+<!--				》点击有惊喜哦！-->
+<!--			</div>-->
+			<!-- 中间文本滑动条 -->
+
+		</div>
+
+
+        <div class="wrap-header">
+            <div class="main-header">
+
+		<!--文字转换-->
+		<div class="slider">
+			<div class="callbacks_container w3l">
+				<ul class="rslides" id="slider">
+					<li>
+
+						<div class="slider-info">
+							<h4>Happy Couples For Ever</h4>
+						    <p>Lorem ipsum dolor sit,</p>
+
+						</div>
+					</li>
+					<li>
+
+						<div class="slider-info">
+							<h4>The Best Day In Our Lives </h4>
+							<p>Quis autem vel eum quivol.</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+		<!--文字转换-->
+
+
+                <div class="zerogrid">
+                    <h1>我们相恋已有：</h1>
+                    <div class="counter">
+                        <div class="centered text-center" id="myCounter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+   <!--前半部分-->
+
+
+	<div class='container-fluid'>
+
+		<!-- 左边文字动画 -->
+        <div style="position:fixed ; left: 10px; top: 60px;z-index:1000">
+        	<div class='biaobai'>
+        		<div>一</div>
+        		<div>切</div>
+        		<div>不</div>
+        		<div>敢</div>
+        		<div>晒</div>
+        		<div>的</div>
+        		<div>表</div>
+        		<div>白</div>
+        		<div>都</div>
+        		<div>不</div>
+        		<div>白</div>
+        	</div>
+        </div>
+		<!-- 左边文字动画 -->
+
+		<!-- 底部向上箭头 -->
+		<div class='totop'>↑</div>
+		<!-- 底部向上箭头 -->
+
+		<!-- 底部 -->
+		<div class="container" id="page">
+			<div style="text-align: center; margin: 100px 0 10px">
+				&copy; 2018-永远... Copyright 小月月--鄂ICP备1314520号 <a href="#" target="_blank" style="text-decoration: underline;color: #fff"></span></a>
+			</div>
+			<!-- footer -->
+		</div>
+		<!-- 底部 -->
+
+	</div>
+
+</body>
+</html>
