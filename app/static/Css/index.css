@@ -1,44 +1,13 @@
 @charset "utf-8";
 
-
-/*********head的文字转换**********/
-
-/********head的文字转换**********/
-
-
 /**********滑动条***********/
-/*.suofang {
-    z-index:9999;
-    background-color:green;
-    width:20px;
-    height:200px;
-    cursor:pointer;
-    color:white;
-    text-align:center;
-    line-height:30px;
-    float:right;
-    margin: 25px auto 0px auto;
-}*/
-
-
-.bigbox {
-    position: absolute;
-    right: 0;
-    z-index:9999;
-    margin-right: 15px;
-}
-
-@media only screen and (max-width: 500px) {
-	.bigbox{margin-right: 0px;}
-}
-
 /*容器高度*/
 .scroll_con{
-    float:right;
     background-color: #82a6f5;
-    width:256px;
-    height:400px;
+    width:80%;
+    height:120px;
     border:0px solid #f6d6ff;
+    border: 5px solid #FFCC99;
     margin:-580px 200px 0 auto;
     position:relative;
     border-radius: 10px;
@@ -49,7 +18,7 @@
 
 /*文本实际高度*/
 .paragraph{
-    width:250px;
+    width:100%;
     position:absolute;
     left:-20px;
     top:0;
@@ -78,34 +47,251 @@
 .paragraph 	h1:hover{
 			color:cyan;
 }
+
+@media only screen and (min-width: 1025px) {
+	.scroll_con {
+        width:60%;
+        height:240px;
+    }
+}
+
+@media only screen  and (min-width:500px) and (max-width:1024px) {
+	.scroll_con {
+        width:60%;
+        height:240px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+	.bigbox{margin-right: 0px;}
+}
 /**********滑动条***********/
 
 
-/**********图片切换***********/
-/*#clock-box {
-    //background-image: url(../images/index/2.png), url(../images/index/1.png);
-    //background-repeat:no-repeat, no-repeat;
-    //background-position:center top,center top;
+/**********我们图片***********/
+.position-relative {
+    position: relative!important;
+}
+
+.bride-groom-box .bride-groom-content a h3
+{
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+}
+
+ .bride-groom-box:hover .bride-groom-content a h3 {
+    color: #ff4061;
+ }
+
+
+.bride-groom-photo img, .story-photo-box img, .blog-page-area .blog-overlay figure img, .footer-widget.footer-recent-posts ul li figure img, .footer-widget.footer-gallery ul li figure img, .widget-recent-posts ul li figure img, .widget-instagram ul li a figure img{
     width: 100%;
-    height: 400px;
-    background-size: 400px 100%, 500px 100%;
+    transform: scale(1.1);
+    transition: all ease-in-out .7s;
+    -webkit-transition: all ease-in-out .7s;
+}
+.bride-groom-photo:hover img, .story-photo-box:hover img, .blog-page-area .card:hover figure img, .footer-widget.footer-recent-posts ul li a:hover figure img, .footer-widget.footer-gallery ul li a:hover figure img, .widget-recent-posts ul li a:hover figure img, .widget-instagram ul li a:hover figure img{
+    transform: scale(1);
+}
+
+
+.bride-groom-photo:hover .bride-groom-border{
+    width: 60%;
+    height: 60%;
+}
+
+/*-------------------------------------------
+    6. Bride And Groom Area Start
+-------------------------------------------*/
+.bride-groom-content h3 {
+    font-size: 30px;
+    margin-top: 30px;
     text-align: center;
-}*/
-
-#time_img1 {
-    width: 50%;
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%, -20%);     //50%为自身尺寸的一半
+}
+.bride-photo-box {
+    border: 14px solid transparent;
+    overflow: hidden;
 }
 
-#time_img2 {
-    width: 50%;
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%, -20%);
+.bride-groom-content p {
+    margin: 14px 0 23px;
 }
-/**********图片切换***********/
+.footer-social ul li, .bride-groom-social ul li, .friend-social ul li{
+    display: inline;
+}
+.bride-groom-social a, .footer-social a, .friend-social a {
+    border-radius: 50px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid;
+}
+/*Bride Groom Border Style*/
+.bride-border-box span {
+    position: absolute;
+    height: 54px;
+    width: 54px;
+    z-index: -1;
+    transition: all ease-in-out .9s;
+    -webkit-transition: all ease-in-out .9s;
+}
+.bride-groom-photo:hover .bride-groom-border{
+    width: 60%;
+    height: 60%;
+}
+.bride-border-box span:nth-child(1) {
+    right: 0;
+    top: 0;
+    border-top: 5px solid;
+    border-right: 5px solid;
+    border-color: #ff4061;
+}
+.bride-border-box span:nth-child(2) {
+    right: 0;
+    bottom: 0;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+    border-color: #ff4061;
+}
+
+.bride-border-box span:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    border-bottom: 5px solid;
+    border-left: 5px solid;
+    border-color: #ff4061;
+}
+.bride-border-box span:nth-child(4) {
+    left: 0;
+    top: 0;
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-color: #ff4061;
+}
+
+/*--------Bride Groom Divider------*/
+.bride-groom-divider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.bride-divider-img {
+    padding-bottom: 265px;
+}
+.bride-divider-img img {
+    animation: pulse 2s ease-in-out infinite;
+}
+/*取消bootstrap的屏幕自适应*/
+
+.bride-groom-area .container .row .text-center {
+    width:100%;
+}
+
+/*-------------------------------------------
+   6. Bride And Groom Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+   6. 屏幕适配
+-------------------------------------------*/
+@media only screen and (min-width: 300px) {
+      /*取消bootstrap的屏幕自适应*/
+      .col-sm-6 {
+          width: 40%;
+      }
+      .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+          float: left;
+      }
+}
+
+@media only screen and (min-width: 768px) {
+      /*取消bootstrap的屏幕自适应*/
+       .bride-divider-img {
+           margin-top: 145px;
+        }
+        .container {
+           width: 100%;
+        }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+      /*Bride Groom Area*/
+      .bride-groom-content h3 {
+          font-size: 30px;
+          margin-top: 25px;
+      }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+      .bride-groom-content h3 {
+          font-size: 30px;
+      }
+
+      /*取消bootstrap的屏幕自适应*/
+      .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+          padding-right: 0px;
+          padding-left: 10px;
+      }
+      /*取消bootstrap的屏幕自适应*/
+    /*中间心自适应*/
+       .bride-divider-img {
+           margin-top: 72px;
+        }
+     .bride-divider-img img {
+        width: 64px;
+    }
+    /*中间心自适应*/
+}
+
+@media only screen and (min-width:300px) and (max-width:479px){
+     /*Bride And Groom CSS*/
+       .bride-groom-box{
+           margin-bottom: 45px;
+        }
+      .bride-groom-content h3 {
+          margin-top: 14px;
+      }
+
+      #content h4.author-name {
+          margin-bottom: 8px;
+      }
+      .leave-comment-area > h2 {
+          margin: 10px 0 20px;
+      }
+      .leave-comment-area .form-group {
+          margin-bottom: 16px;
+      }
+
+      /*取消bootstrap的屏幕自适应*/
+      .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+          padding-right: 0px;
+          padding-left: 10px;
+      }
+      /*取消bootstrap的屏幕自适应*/
+
+      /*中间心自适应*/
+       .bride-divider-img {
+           margin-top: 72px;
+        }
+
+     .bride-divider-img img {
+        width: 54px;
+    }
+    /*中间心自适应*/
+}
+/*-------------------------------------------
+   6. 屏幕适配
+-------------------------------------------*/
+/**********我们图片***********/
 
 
 

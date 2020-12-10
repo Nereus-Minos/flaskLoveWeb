@@ -54,148 +54,38 @@
     </script>
 	<!--时间表-->
 
-	<!--图片切换-->
-	<script>
+<!--	</script>-->
+<!--	<script type="text/javascript">-->
 
-<!--		var Imgnum = 2;-->
-<!--		var inouttime = 1;-->
-<!--		var changePeriod=3;-->
-<!--		var steps = 30;-->
-<!--		var i;var j;-->
-<!--		var Period = inouttime / steps;-->
-<!--		var changeValue= Period/inouttime;-->
-
-<!--		function Randompick() {-->
-<!--			i = Math.floor(Math.random() * Imgnum) + 1;-->
-<!--			while ($('#time_img' + i).css('opacity') == '1')-->
-<!--				i = Math.floor(Math.random() * Imgnum) + 1;-->
-<!--			return i;-->
-<!--		}-->
-
-<!--		function RandomStart() {-->
-<!--			i = Randompick();-->
-<!--			$('#time_img' + i).css('opacity', 1);-->
-<!--		}-->
-
-<!--		function Min(i, j) {-->
-<!--			if (i > j)-->
-<!--				return j;-->
-<!--			else return i;-->
-<!--		}-->
-
-<!--		function Max(i, j) {-->
-<!--			if (i > j)-->
-<!--				return i;-->
-<!--			else return j;-->
-<!--		}-->
-<!--		function Fadeinout()-->
-<!--		{-->
-<!--			$('#time_img' + i).css('opacity', Min(parseFloat($('#time_img' + i).css('opacity')) + changeValue, 1));-->
-<!--			$('#time_img' + j).css('opacity', Max(parseFloat($('#time_img' + j).css('opacity')) - changeValue, 0.0));-->
-<!--			//console.log($('#img' + i).css('opacity'));-->
-<!--			//console.log($('#img' + j).css('opacity'));-->
-<!--			if(($('#time_img' + i).css('opacity')==0.5)&&($('#time_img' + j).css('opacity')==0))-->
-<!--			{-->
-<!--				//alert('abort');-->
-<!--				$('#time_img'+i).css('opacity',1);-->
-<!--				$('#time_img'+j).css('opacity',0);-->
-<!--				return;-->
-<!--			}-->
-<!--			setTimeout("Fadeinout()",Period*1000);-->
-<!--		}-->
-<!--		function RandomChange() {-->
-<!--			i = Randompick();-->
-<!--			// i fade in, j fade out-->
-<!--			for (j = 1; j <= Imgnum; j++) {-->
-<!--				if ($('#time_img' + j).css('opacity') == '1')-->
-<!--					break;-->
-<!--			}-->
-<!--			Fadeinout();-->
-<!--		}-->
-<!--		setTimeout('RandomStart()',0);-->
-<!--		setInterval('RandomChange()',changePeriod*1000);-->
-    </script>
-	<!--图片切换-->
-	<script type="text/javascript">
-<!--		new Swiper(".swiper-container", {-->
-<!--            direction: 'horizontal', //默认horizontal, 水平轮播-->
-<!--            autoplay: true,   //自动切换-->
-<!--            loop: true,  //循环-->
-<!--            slidesPerView: "auto",  //默认1, 同时显示的slides数量,auto 代表根据轮播图的宽度排列-->
-<!--            spaceBetween: 30, //轮播图之间的间距-->
-<!--        })-->
-	</script>
-	<script type="text/javascript">
 <!--	$(function(){-->
 <!--		var dnum = 0;-->
-<!--		$(".bigbox").css({left: $(".bigbox").offset().left + $(".scroll_con").outerWidth(true)});-->
+<!--		$(".scroll_con").css({width:0});-->
 <!--		$(".suofang").click(function() {-->
 <!--			dnum = dnum + 1;-->
-<!--			if (dnum % 2 == 0) {-->
-<!--				$(".bigbox").animate({-->
-<!--					left: $(".bigbox").offset().left + $(".scroll_con").outerWidth(true)-->
+<!--			if (dnum % 2 != 0) {-->
+<!--&lt;!&ndash;				$(".suofang").css("margin-right","0px");&ndash;&gt;-->
+<!--				$(".scroll_con").animate({-->
+<!--					width:256-->
 <!--				}, 500)-->
+<!--				$(".zitiqiehuan1").html("可");-->
+<!--				$(".zitiqiehuan2").html("收");-->
+<!--				$(".zitiqiehuan3").html("起");-->
 <!--			} else {-->
-<!--				$(".bigbox").stop(true, true).animate({-->
-<!--					left: $(".bigbox").offset().left - $(".scroll_con").outerWidth(true)-->
+
+<!--				$(".scroll_con").stop(true, true).animate({-->
+<!--					width:0-->
 <!--				}, 500)-->
+<!--				$(".zitiqiehuan1").html("有");-->
+<!--				$(".zitiqiehuan2").html("惊");-->
+<!--				$(".zitiqiehuan3").html("喜");-->
+
+<!--&lt;!&ndash;				setTimeout(function () {$(".suofang").css("margin-right","15px");}, 500);&ndash;&gt;-->
 <!--			}-->
 <!--		})-->
 <!--	})-->
 
-	$(function(){
-		var dnum = 0;
-		$(".scroll_con").css({width:0});
-		$(".suofang").click(function() {
-			dnum = dnum + 1;
-			if (dnum % 2 != 0) {
-<!--				$(".suofang").css("margin-right","0px");-->
-				$(".scroll_con").animate({
-					width:256
-				}, 500)
-				$(".zitiqiehuan1").html("可");
-				$(".zitiqiehuan2").html("收");
-				$(".zitiqiehuan3").html("起");
-			} else {
+<!--	</script>-->
 
-				$(".scroll_con").stop(true, true).animate({
-					width:0
-				}, 500)
-				$(".zitiqiehuan1").html("有");
-				$(".zitiqiehuan2").html("惊");
-				$(".zitiqiehuan3").html("喜");
-
-<!--				setTimeout(function () {$(".suofang").css("margin-right","15px");}, 500);-->
-			}
-		})
-	})
-
-	</script>
-
-
-<!--	文字转换-->
-	<script src="/static/Js/responsiveslides.min.js"></script>
-		<script>
-				$(function () {
-					 var w = $(window).width();
-					$('.slider-info').css('width', w);
-
-					$("#slider").responsiveSlides({
-						auto: true,
-						pager: true,
-						nav: true,
-						speed: 1000,
-						namespace: "callbacks",
-						before: function () {
-							$('.events').append("<li>before event fired.</li>");
-						},
-						after: function () {
-							$('.events').append("<li>after event fired.</li>");
-						}
-					});
-				});
-			</script>
-<!--	文字转换-->
 </head>
 
 
@@ -235,22 +125,49 @@
     <!--前半部分-->
    <header >
 	   		<!-- 中间文本滑动条 -->
-		<div class='bigbox'>
+<!--		<div class='bigbox'>-->
 
-			<div class='suofang biaobai' style="width:30px;float:left; margin-top: 30px; z-index:1000; background-color:#0090CE; cursor:pointer;">
-					<div style="text-align:center">》</div>
-					<div>点</div>
-					<div>击</div>
-					<div class="zitiqiehuan1">有</div>
-					<div class="zitiqiehuan2">惊</div>
-					<div class="zitiqiehuan3">喜</div>
-					<div>哦</div>
-					<div style="text-align:center">！</div>
-				</div>
+<!--			<div class='suofang biaobai' style="width:30px;float:right; margin-top: 30px; z-index:1000; background-color:#0090CE; cursor:pointer;">-->
+<!--					<div style="text-align:center">》</div>-->
+<!--					<div>点</div>-->
+<!--					<div>击</div>-->
+<!--					<div class="zitiqiehuan1">有</div>-->
+<!--					<div class="zitiqiehuan2">惊</div>-->
+<!--					<div class="zitiqiehuan3">喜</div>-->
+<!--					<div>哦</div>-->
+<!--					<div style="text-align:center">！</div>-->
+<!--				</div>-->
+
+        <div class="wrap-header">
+            <div class="main-header">
+
+<!--				 <img src="static/images/index/header-love-bg.png" alt="Love Img" class="header-content-float-img position-absolute">-->
 
 
-		 <!-- 容器高度 -->
-			<div class="scroll_con" >
+                <div class="zerogrid">
+                    <h1 class="head-h1">我们相恋已有：</h1>
+                    <div class="counter">
+                        <div class="centered text-center" id="myCounter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+   <!--前半部分-->
+
+<!-- Bride and Groom Area Start -->
+<section class="bride-groom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="section-heading">Bride & Groom</h2>
+                <img class="heading-divider" src="static/images/index/divider.png" alt="divider">
+<!--                <h3 class="section-subheading">Aliquam erat volutpat. Curabitur tempor nibh quis arcu convallis, sed viverra quam sollicitudin. Proin sed augue sed neque ultricies condimentum. </h3>-->
+
+ 		 <!-- 中间文本滑动条 -->
+				<h3 class="section-subheading" style="margin-top: 0px;">
+			<div class="scroll_con">
 				<!-- 文本实际高度 -->
 				<div class="paragraph"  id="wrap">
 
@@ -336,57 +253,69 @@
 					<h1>我永远都是爱你的大傻子</h1>
 				</div>
 			</div>
-			 <!-- 中间文本滑动条 -->
-<!--			<div class="suofang biaobai">-->
-<!--				》点击有惊喜哦！-->
-<!--			</div>-->
+					</h3>
 			<!-- 中间文本滑动条 -->
 
-		</div>
 
+            </div>
+        </div>
+        <div class="row">
 
-        <div class="wrap-header">
-            <div class="main-header">
+            <!-- Bride Groom Box start-->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+                <div class="bride-groom-box">
+                    <div class="bride-groom-photo position-relative">
+                        <div class="bride-photo-box position-relative"><img src="static/images/index/chounv.jpg" alt="Bride"></div>
+                        <div class="bride-border-box">
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                        </div>
+                    </div>
+                    <div class="bride-groom-content">
+                        <a href="bride-groom.html"><h3>臭 車</h3></a>
+                        <p>未完待续。。。</p>
+					</div>
+                </div>
+            </div>
+            <!-- Bride Groom Box end-->
 
-		<!--文字转换-->
-		<div class="slider">
-			<div class="callbacks_container w3l">
-				<ul class="rslides" id="slider">
-					<li>
-
-						<div class="slider-info">
-							<h4>Happy Couples For Ever</h4>
-						    <p>Lorem ipsum dolor sit,</p>
-
-						</div>
-					</li>
-					<li>
-
-						<div class="slider-info">
-							<h4>The Best Day In Our Lives </h4>
-							<p>Quis autem vel eum quivol.</p>
-						</div>
-					</li>
-				</ul>
-
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-		<!--文字转换-->
-
-
-                <div class="zerogrid">
-                    <h1>我们相恋已有：</h1>
-                    <div class="counter">
-                        <div class="centered text-center" id="myCounter"></div>
+            <!-- Bride Groom Divider start-->
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="bride-groom-divider">
+                    <div class="bride-divider-img">
+                        <img src="static/images/index/bride-groom-divider-love.png" alt="Love">
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Bride Groom Divider end-->
 
-    </header>
-   <!--前半部分-->
+            <!-- Bride Groom Box start-->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+                <div class="bride-groom-box">
+                    <div class="bride-groom-photo position-relative">
+                        <div class="bride-photo-box position-relative"><img src="static/images/index/shuaige.jpg" alt="Groom"></div>
+                        <div class="bride-border-box">
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                            <span class="bride-groom-border"></span>
+                        </div>
+                    </div>
+                    <div class="bride-groom-content">
+                        <a href="bride-groom.html"><h3>帅 哥</h3></a>
+                        <p>未完待续。。。</p>
+					</div>
+                </div>
+            </div>
+            <!-- Bride Groom Box end-->
+
+        </div>
+    </div>
+</section>
+<!-- Bride and Groom Area End -->
+
 
 
 	<div class='container-fluid'>
