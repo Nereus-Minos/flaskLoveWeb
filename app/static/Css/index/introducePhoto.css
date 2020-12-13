@@ -1,74 +1,6 @@
 @charset "utf-8";
 
-/**********滑动条***********/
-/*容器高度*/
-.scroll_con{
-    background-color: #82a6f5;
-    width:80%;
-    height:120px;
-    border:0px solid #f6d6ff;
-    border: 5px solid #FFCC99;
-    margin:-580px 200px 0 auto;
-    position:relative;
-    border-radius: 10px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 
-
-/*文本实际高度*/
-.paragraph{
-    width:100%;
-    position:absolute;
-    left:-20px;
-    top:0;
-    font-size:14px;
-    font-family:'Microsoft Yahei';
-    line-height:32px;
-    text-indent:2em;
-}
-
-.paragraph h1{
-	font-size: 20px;
-}
-.paragraph h4{
-	font-size: 16px;
-}
-.paragraph 	h4{
-	color:#f6d6ff;
-}
-.paragraph 	h1{
-	color:yellow;
-}
-
-.paragraph 	h4:hover{
-			color:cyan;
-}
-.paragraph 	h1:hover{
-			color:cyan;
-}
-
-@media only screen and (min-width: 1025px) {
-	.scroll_con {
-        width:60%;
-        height:240px;
-    }
-}
-
-@media only screen  and (min-width:500px) and (max-width:1024px) {
-	.scroll_con {
-        width:60%;
-        height:240px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-	.bigbox{margin-right: 0px;}
-}
-/**********滑动条***********/
-
-
-/**********我们图片***********/
 .position-relative {
     position: relative!important;
 }
@@ -291,8 +223,6 @@
 /*-------------------------------------------
    6. 屏幕适配
 -------------------------------------------*/
-/**********我们图片***********/
-
 
 
 

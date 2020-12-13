@@ -1,0 +1,74 @@
+
+/*左侧动画*/
+@keyframes loading{
+      from{
+        transform:scale(1,1);
+      }
+      to{
+        transform:scale(1.5,1.5);
+      }
+    }
+
+
+.biaobai {
+  font:bold 15px/20px Microsoft Yahei;
+  color:#9ff048;
+}
+
+.biaobai div{
+  margin:10px;
+  width:25px;
+  height:27px;
+  /*border:1px solid #000;*/
+  animation:loading 500ms ease infinite alternate;
+}
+
+.biaobai  div:nth-child(1){
+  /*background-color:red;*/
+}
+.biaobai div:nth-child(2){
+  /*background-color:green;*/
+  animation-delay:100ms;
+}
+.biaobai div:nth-child(3){
+  /*background-color:pink;*/
+  animation-delay:200ms;
+}
+
+.biaobai  div:nth-child(4){
+  /*background-color:lightgreen;*/
+  animation-delay:300ms;
+}
+
+.biaobai  div:nth-child(5){
+  /*background-color:lightblue;*/
+  animation-delay:400ms;
+}
+.biaobai  div:nth-child(6){
+  /*background-color:red;*/
+  animation-delay:500ms;
+}
+.biaobai div:nth-child(7){
+  /*background-color:green;*/
+  animation-delay:600ms;
+}
+.biaobai div:nth-child(8){
+  /*background-color:pink;*/
+  animation-delay:700ms;
+}
+
+.biaobai  div:nth-child(9){
+  /*background-color:lightgreen;*/
+  animation-delay:800ms;
+}
+
+
+.biaobai  div:nth-child(10){
+  /*background-color:lightblue;*/
+  animation-delay:900ms;
+}
+.biaobai  div:nth-child(11){
+  /*background-color:red;*/
+  animation-delay:1000ms;
+}
+/*左侧动画*/

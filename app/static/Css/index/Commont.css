@@ -1,0 +1,78 @@
+
+
+
+/*-------------------------------------------
+            9. RSVP Area CSS Start
+-------------------------------------------*/
+
+.rsvp-form-area form {
+    padding: 80px 53px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+}
+.rsvp-form-area .form-group.nessage-text {
+    margin-bottom: 0;
+}
+.rsvp-submit-button button {
+    background-color: #101127;
+    color: #fff;
+    margin: 30px 0 0;
+}
+.rsvp-submit-button button:hover {
+    background-color: #ff4061;
+}
+/*-------9.1 RSVP Page Area CSS-------*/
+.rsvp-area.rsvp-page-area {
+    padding: 80px 0 74px;
+}
+/*RSVP Page Banner CSS*/
+.rsvp-banner-area{
+    background-image: url(../img/rsvp-page-banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*-------------------------------------------
+           9. RSVP Area CSS End
+-------------------------------------------*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+/*RSVP Area CSS*/
+      .rsvp-area {
+          padding: 50px 0 20px;
+      }
+      .single-friend {
+          margin-bottom: 20px;
+      }
+      .friends-says-slider .owl-dots {
+          margin-top: 16px;
+      }
+      .rsvp-form-area {
+          padding: 0 51px 56px;
+          margin: 0 38px;
+          background-size: contain!important;
+      }
+      .rsvp-form-area form {
+          padding:37px 50px;
+      }
+      .rsvp-area.rsvp-page-area {
+          padding: 50px 0 20px;
+      }
+      .leave-comment-area > h2 {
+          margin: 12px 0 30px;
+      }
+}
+
+
+@media only screen and (max-width: 767px) {
+     /*RSVP Area CSS*/
+      .rsvp-form-area form {
+          padding: 35px 35px;
+      }
+      .rsvp-form-area {
+          padding: 0 0 85px;
+          margin: 0 25px;
+      }
+}

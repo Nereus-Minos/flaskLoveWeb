@@ -4,55 +4,45 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>我和他的小爱情</title>
-    <link href="/static/Css/screen.css" rel="stylesheet" type="text/css" >
-    <link href="/static/Css/main.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/static/Css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/static/Css/daohangtiao.css">
-	<link rel="stylesheet" type="text/css" href="/static/Css/index.css">
-	<link rel="stylesheet" type="text/css" href="/static/Css/flex.css">
 
-	<link rel="stylesheet" type="text/css" href="/static/package/css/swiper.min.css">
+<!--    <link href="/static/Css/main.css" rel="stylesheet" type="text/css">-->
 
+<!--第三方库-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/thirdPackage/bootstrap.min.css">
+	<script type="text/javascript" src="/static/Js/thirdPackage/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/Js/thirdPackage/bootstrap.min.js"></script>
+<!--第三方库-->
 
-    <script type="text/javascript" src="/static/Js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="/static/Js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/static/package/js/swiper.min.js"></script>
-
-
+<!--公共库-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/common/daohangtiao.css">
+	<!-- 闪动文字 -->
+	<link rel="stylesheet" type="text/css" href="/static/Css/common/flashText.css">
+	<!-- 闪动文字 -->
 	<!-- 底部向上箭头 -->
-	<script type="text/javascript">
-		$(function(){
-			$totop = $('.totop');
-			$(window).scroll(function(){
-				var iNum = $(document).scrollTop();
-				if(iNum>200){
-					$totop.fadeIn();
-				}
-				else
-				{
-					$totop.fadeOut();
-				}
-			})
-			$totop.click(function(){
-				$('html,body').animate({'scrollTop':0});
-			})
-		})
-	</script>
+	<link rel="stylesheet" type="text/css" href="/static/Css/common/upPoint.css">
+	<script type="text/javascript" src="/static/Js/common/upPoint.js"></script>
 	<!-- 底部向上箭头 -->
+<!--公共库-->
 
+<!--index库-->
+	<!--我们的介绍-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/introducePhoto.css">
+	<!--我们的介绍-->
+	<!--滑动文字模块-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/scrollModule.css">
+	<!--滑动文字模块-->
 	<!--时间表-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/mb-comingsoon-iceberg.css">
-    <script type="text/javascript" src="/static/Js/jquery.mb-comingsoon.min.js"></script>
-	    <script type="text/javascript">
-        $(function () {
-			<!--  new Date(year, month, day, hours, minutes, seconds, milliseconds);-->
-            $('#myCounter').mbComingsoon({ expiryDate: new Date(2018, 9, 1, 9, 0), speed:100 });
-			 setTimeout(function () {
-                $(window).resize();
-            }, 1000);
-        })
-    </script>
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/mb-comingsoon-iceberg.css">
+    <script type="text/javascript" src="/static/Js/index/jquery.mb-comingsoon.min.js"></script>
 	<!--时间表-->
+
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/Commont.css">
+
+<!--index库-->
+
+<!--    <link href="/static/Css/screen.css" rel="stylesheet" type="text/css" >-->
+<!--	<link rel="stylesheet" type="text/css" href="/static/package/css/swiper.min.css">-->
+
 
 <!--	</script>-->
 <!--	<script type="text/javascript">-->
@@ -114,7 +104,7 @@
 					<li><a href="/story/">爱情故事</a></li>
 					<li><a href="/letter/">三行情书</a></li>
 					<li><a href="/youme/">小小合照</a></li>
-					<li><a href="/loveWords/0/">每日情话</a></li>
+<!--					<li><a href="/loveWords/0/">每日情话</a></li>-->
 					<li><a href="/Comments/">送上祝福</a></li>
 				</ul>
 	        </div>
@@ -140,10 +130,6 @@
 
         <div class="wrap-header">
             <div class="main-header">
-
-<!--				 <img src="static/images/index/header-love-bg.png" alt="Love Img" class="header-content-float-img position-absolute">-->
-
-
                 <div class="zerogrid">
                     <h1 class="head-h1">我们相恋已有：</h1>
                     <div class="counter">
@@ -161,7 +147,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="section-heading">Bride & Groom</h2>
+                <h2 class="section-heading">臭車 & 帅哥</h2>
                 <img class="heading-divider" src="static/images/index/divider.png" alt="divider">
 <!--                <h3 class="section-subheading">Aliquam erat volutpat. Curabitur tempor nibh quis arcu convallis, sed viverra quam sollicitudin. Proin sed augue sed neque ultricies condimentum. </h3>-->
 
@@ -274,7 +260,7 @@
                         </div>
                     </div>
                     <div class="bride-groom-content">
-                        <a href="bride-groom.html"><h3>臭 車</h3></a>
+                        <a href="/youme/"><h3>臭 車</h3></a>
                         <p>未完待续。。。</p>
 					</div>
                 </div>
@@ -304,7 +290,7 @@
                         </div>
                     </div>
                     <div class="bride-groom-content">
-                        <a href="bride-groom.html"><h3>帅 哥</h3></a>
+                        <a href="/youme/"><h3>帅 哥</h3></a>
                         <p>未完待续。。。</p>
 					</div>
                 </div>
@@ -317,8 +303,42 @@
 <!-- Bride and Groom Area End -->
 
 
+<section class="rsvp-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
+                <h2 class="section-heading">祝 福</h2>
+                <img class="heading-divider" src="static/images/index/divider.png">
+                <h3 class="section-subheading">未完待续..</h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- RSVP Area Start -->
+            <div class="rsvp-form-area">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-sm-6" style="width:100%;padding-left: 0px;">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="名字" id="name">
+                            </div>
+                        <div class="col-sm-12" style="width:100%;padding-left: 0px;">
+                            <div class="form-group nessage-text">
+                                <textarea name="message" rows="5" class="form-control" placeholder="说些什么吧..." id="message"></textarea>
+                            </div>
+                            <div class="rsvp-submit-button text-center">
+                                <button type="button" class="btn section-button text-uppercase">发表</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- RSVP Area End -->
+        </div>
+    </div>
+</section>
 
-	<div class='container-fluid'>
+
+	<div class='container-fluid' style=" background-color: #82a6f5;">
 
 		<!-- 左边文字动画 -->
         <div style="position:fixed ; left: 10px; top: 60px;z-index:1000">
@@ -344,7 +364,7 @@
 
 		<!-- 底部 -->
 		<div class="container" id="page">
-			<div style="text-align: center; margin: 100px 0 10px">
+			<div style="text-align: center; margin: 40px 0 20px">
 				&copy; 2018-永远... Copyright 小月月--鄂ICP备1314520号 <a href="#" target="_blank" style="text-decoration: underline;color: #fff"></span></a>
 			</div>
 			<!-- footer -->

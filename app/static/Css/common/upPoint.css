@@ -1,0 +1,23 @@
+/*右下角箭头*/
+.totop{
+  width:40px;
+  height:40px;
+  background-color:#FFCC99;
+  color:#000;
+  position:fixed;
+  right:20px;
+  bottom:50px;
+  line-height:40px;
+  text-align:center;
+  font-size:30px;
+  border-radius:50%;
+  cursor:pointer;
+  /*display:none;*/
+  z-index:99999;
+}
+.totop:hover{
+  background-color:#e0f7e2;
+  color:#00be06;
+  z-index:99999;
+}
+/*右下角箭头*/
