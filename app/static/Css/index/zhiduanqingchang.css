@@ -1,0 +1,28 @@
+
+.zhiduanqingchang {
+    background: url(/static/images/index/zhiduanqingchang.png) no-repeat center 0px;
+    height:470px;
+    background-size:100%;
+}
+
+.zhiduanqingchang ul {
+    float:left;
+    width:50%;
+    list-style: none;
+    padding-top: 20px;
+}
+
+.zhiduanqingchang ul li {
+    height:110px;
+}
+
+.zhiduanqingchang ul .text_D {
+    padding-top:15px;
+}
+
+
+.zhiduanqingchang ul li .text_H1 {
+    padding-left:25px;
+}
+
+

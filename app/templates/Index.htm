@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>我和他的小爱情</title>
 
-<!--    <link href="/static/Css/main.css" rel="stylesheet" type="text/css">-->
-
 <!--第三方库-->
 	<link rel="stylesheet" type="text/css" href="/static/Css/thirdPackage/bootstrap.min.css">
 	<script type="text/javascript" src="/static/Js/thirdPackage/jquery-1.11.3.min.js"></script>
@@ -36,45 +34,65 @@
     <script type="text/javascript" src="/static/Js/index/jquery.mb-comingsoon.min.js"></script>
 	<!--时间表-->
 
+	<!--无缝滚动图片-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/zhiduanqingchang.css">
+	<!--无缝滚动图片-->
+
+	<!--纸短情长-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/wufenggundong.css">
+	<!--纸短情长-->
+
 	<link rel="stylesheet" type="text/css" href="/static/Css/index/Commont.css">
 
 <!--index库-->
 
-<!--    <link href="/static/Css/screen.css" rel="stylesheet" type="text/css" >-->
-<!--	<link rel="stylesheet" type="text/css" href="/static/package/css/swiper.min.css">-->
+<style>
+section .container .row .col-sm-12 .section-heading {
+	margin-top: 0px;
+    margin-bottom: 0px;
+}
+</style>
 
+<!--无缝滚动 -->
+<script type="text/javascript">
+	window.onload = function(){
+		var oDiv = document.getElementById('slide');
+		//通过标签获取元素，获取的是选择集，加上下标才能获取到元素
+		var oUl = oDiv.getElementsByTagName('ul')[0];
+		var iLeft = 0;
+		var iSpeed = -2;
+		var iNowspeed = 0;
+		//将ul里面的内容复制一份，整个ul里面就包含了10个li
+		oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+		function moving(){
+			iLeft += iSpeed;
+			// 当ul向左滚动到第5个li时，瞬间将整个ul拉回到初始位置
+			if(iLeft<-1651.5)
+			{
+				iLeft=0;
+			}
+			//当ul在起始位置往右滚动时候，瞬间将整个ul拉回到往左的第5个li的位置
+			if(iLeft>0)
+			{
+				iLeft = -1651.5;
+			}
+			oUl.style.left = iLeft + 'px';
+		}
+		var timer = setInterval(moving,30);
 
-<!--	</script>-->
-<!--	<script type="text/javascript">-->
+		// 当鼠标移入的时候
+		oDiv.onmouseover = function(){
+			iNowspeed = iSpeed;
+			iSpeed = 0;
+		}
+		// 当鼠标移出的时候
+		oDiv.onmouseout = function(){
+			iSpeed = iNowspeed;
+		}
+	}
+</script>
+<!-- 无缝滚动 -->
 
-<!--	$(function(){-->
-<!--		var dnum = 0;-->
-<!--		$(".scroll_con").css({width:0});-->
-<!--		$(".suofang").click(function() {-->
-<!--			dnum = dnum + 1;-->
-<!--			if (dnum % 2 != 0) {-->
-<!--&lt;!&ndash;				$(".suofang").css("margin-right","0px");&ndash;&gt;-->
-<!--				$(".scroll_con").animate({-->
-<!--					width:256-->
-<!--				}, 500)-->
-<!--				$(".zitiqiehuan1").html("可");-->
-<!--				$(".zitiqiehuan2").html("收");-->
-<!--				$(".zitiqiehuan3").html("起");-->
-<!--			} else {-->
-
-<!--				$(".scroll_con").stop(true, true).animate({-->
-<!--					width:0-->
-<!--				}, 500)-->
-<!--				$(".zitiqiehuan1").html("有");-->
-<!--				$(".zitiqiehuan2").html("惊");-->
-<!--				$(".zitiqiehuan3").html("喜");-->
-
-<!--&lt;!&ndash;				setTimeout(function () {$(".suofang").css("margin-right","15px");}, 500);&ndash;&gt;-->
-<!--			}-->
-<!--		})-->
-<!--	})-->
-
-<!--	</script>-->
 
 </head>
 
@@ -114,20 +132,6 @@
 
     <!--前半部分-->
    <header >
-	   		<!-- 中间文本滑动条 -->
-<!--		<div class='bigbox'>-->
-
-<!--			<div class='suofang biaobai' style="width:30px;float:right; margin-top: 30px; z-index:1000; background-color:#0090CE; cursor:pointer;">-->
-<!--					<div style="text-align:center">》</div>-->
-<!--					<div>点</div>-->
-<!--					<div>击</div>-->
-<!--					<div class="zitiqiehuan1">有</div>-->
-<!--					<div class="zitiqiehuan2">惊</div>-->
-<!--					<div class="zitiqiehuan3">喜</div>-->
-<!--					<div>哦</div>-->
-<!--					<div style="text-align:center">！</div>-->
-<!--				</div>-->
-
         <div class="wrap-header">
             <div class="main-header">
                 <div class="zerogrid">
@@ -142,16 +146,17 @@
     </header>
    <!--前半部分-->
 
-<!-- Bride and Groom Area Start -->
+<!--分割线-->
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+<!--分割线-->
+<!--	藏头诗-->
 <section class="bride-groom-area">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 class="section-heading">臭車 & 帅哥</h2>
-                <img class="heading-divider" src="static/images/index/divider.png" alt="divider">
-<!--                <h3 class="section-subheading">Aliquam erat volutpat. Curabitur tempor nibh quis arcu convallis, sed viverra quam sollicitudin. Proin sed augue sed neque ultricies condimentum. </h3>-->
-
- 		 <!-- 中间文本滑动条 -->
+            <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
+                <h2 class="section-heading">藏头诗</h2>
+                <img class="heading-divider" src="static/images/index/divider.png">
+                <!-- 中间文本滑动条 -->
 				<h3 class="section-subheading" style="margin-top: 0px;">
 			<div class="scroll_con">
 				<!-- 文本实际高度 -->
@@ -240,8 +245,24 @@
 				</div>
 			</div>
 					</h3>
-			<!-- 中间文本滑动条 -->
+				<!-- 中间文本滑动条 -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--	藏头诗-->
 
+<!-- 我们介绍-->
+<!--分割线-->
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+<!--分割线-->
+<section class="bride-groom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="section-heading">臭車 & 帅哥</h2>
+                <img class="heading-divider" src="static/images/index/divider.png" alt="divider">
+<!--                <h3 class="section-subheading">Aliquam erat volutpat. Curabitur tempor nibh quis arcu convallis, sed viverra quam sollicitudin. Proin sed augue sed neque ultricies condimentum. </h3>-->
 
             </div>
         </div>
@@ -300,9 +321,109 @@
         </div>
     </div>
 </section>
-<!-- Bride and Groom Area End -->
+<!-- 我们介绍-->
 
 
+<!---纸短情长-->
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+
+<section class="rsvp-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
+                <h2 class="section-heading">纸短情长</h2>
+                <img class="heading-divider" src="static/images/index/divider.png">
+                <h3 class="section-subheading">未完待续..</h3>
+			</div>
+        </div>
+		<div class="row">
+			<div  class="zhiduanqingchang">
+				<ul style="padding-left: 20px;">
+					<li>
+						<div class="text_H1">
+							<h4 align="center">学校的我们</h4>
+							<h5>未完待续...<a href="">更多</a></h5>
+						</div>
+					</li>
+					<li>
+						<img src="/static/images/index/zhiduanqingchang/new-1.gif" style="padding-left:20px;">
+					</li>
+					<li class="text_D">
+						<div class="text_H1" >
+							<h4 align="center">社会的我们</h4>
+							<h5>未完待续...<a href="">更多</a></h5>
+						</div>
+					</li>
+					<li>
+						<img src="/static/images/index/zhiduanqingchang/new-4.gif" style="padding-left:25px; padding-top:10px;">
+					</li>
+				</ul>
+				<ul style="padding-right: 20px;">
+					<li>
+						<img src="/static/images/index/zhiduanqingchang/new-3.gif" style="padding-left:40px;">
+					</li>
+					<li class="text_D">
+						<div class="text_H2">
+							<h4 align="center">家里的我们</h4>
+							<h5>未完待续...<a href="">更多</a></h5>
+						</div>
+					</li>
+					<li>
+						<img src="/static/images/index/zhiduanqingchang/new-2.gif" style="padding-left:40px; padding-top:10px;">
+					</li>
+					<li class="text_D" STYLE="padding-top:20px;">
+						<div class="text_H2">
+							<h4 align="center">未来的我们</h4>
+							<h5>未完待续...<a href="">更多</a></h5>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+</section>
+<!---纸短情长-->
+
+
+<!--分割线-->
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+<!--分割线-->
+<!--	视频流-->
+<section class="rsvp-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
+                <h2 class="section-heading">绘声绘色</h2>
+                <img class="heading-divider" src="static/images/index/divider.png">
+                <h3 class="section-subheading">未完待续..</h3>
+				<video muted controls loop width="320" height="240" poster="/static/video/video1.jpg" src="/static/video/index1.mp4"></video>
+				<!-- 无缝滚动 -->
+				<div class="list_con" id="slide">
+					<ul>
+					<li><img src="/static/images/index/scronPhoto/1.jpg" height="170" width="98" alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/2.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/3.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/4.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/5.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/6.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/7.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/8.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/scronPhoto/9.jpg" height="170" width="98"alt="我和他"></li>
+
+					</ul>
+				</div>
+				<!-- 无缝滚动 -->
+			</div>
+        </div>
+    </div>
+</section>
+<!--	视频流-->
+
+
+<!--分割线-->
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+<!--分割线-->
+<!--	祝福-->
 <section class="rsvp-area">
     <div class="container">
         <div class="row">
@@ -336,7 +457,7 @@
         </div>
     </div>
 </section>
-
+<!--	祝福-->
 
 	<div class='container-fluid' style=" background-color: #82a6f5;">
 

@@ -2,11 +2,11 @@ import os
 from PIL import Image
 
 ext = ['jpg', 'jpeg', 'png']
-files = os.listdir('./index')
+files = os.listdir('./index/zhiduanqingchang')
 
 
-def process_image(filename, mwidth=300, mheight=600):
-    image = Image.open('./index/' + filename)
+def process_image(filename, mwidth=600, mheight=284):
+    image = Image.open('./index/zhiduanqingchang/' + filename)
     w, h = image.size
     if w <= mwidth and h <= mheight:
         print(filename, 'is OK.')
@@ -18,9 +18,11 @@ def process_image(filename, mwidth=300, mheight=600):
     else:
         scale = 1.0 * h / mheight
         new_im = image.resize((int(w / scale), int(h / scale)), Image.ANTIALIAS)
-    new_im.save('./index/new-' + filename)
+    new_im.save('./index/zhiduanqingchang/new-' + filename)
     new_im.close()
 
+
+#process_image("header-bg.png")
 
 for file in files:
     if file.split('.')[-1] in ext:

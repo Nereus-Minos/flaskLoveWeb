@@ -116,9 +116,7 @@
     height: 100%;
     justify-content: center;
 }
-.bride-divider-img {
-    padding-bottom: 265px;
-}
+
 .bride-divider-img img {
     animation: pulse 2s ease-in-out infinite;
 }
