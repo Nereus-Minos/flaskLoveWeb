@@ -1,11 +1,18 @@
 /*容器高度*/
+
+.scroll_con {
+    padding: 80px 53px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+}
+
 .scroll_con{
     background-color: #82a6f5;
     width:80%;
     height:120px;
     border:0px solid #f6d6ff;
     border: 5px solid #FFCC99;
-    margin: 15px auto 0px auto;
+    margin: 15px auto 20px auto;
     position:relative;
     border-radius: 10px;
     overflow-x: hidden;

@@ -1,7 +1,12 @@
 
 .zhiduanqingchang {
-    background: url(/static/images/index/zhiduanqingchang.png) no-repeat center 0px;
-    height:470px;
+    margin: 10px 10px 15px 10px;
+    padding: 20px 0px 0px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+
+    background: url(/static/images/index/new-zhiduanqingchang.png) no-repeat center 0px;
+    height:645px;
     background-size:100%;
 }
 
@@ -13,13 +18,8 @@
 }
 
 .zhiduanqingchang ul li {
-    height:110px;
+    height:145px;
 }
-
-.zhiduanqingchang ul .text_D {
-    padding-top:15px;
-}
-
 
 .zhiduanqingchang ul li .text_H1 {
     padding-left:25px;

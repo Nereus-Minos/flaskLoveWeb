@@ -1,0 +1,215 @@
+
+
+/******时间表的数字********/
+.counter-group {
+    display: inline-block;
+}
+
+.counter-block {
+  float: left;
+  margin-right: 20px;
+}
+.counter-block .counter {
+  border:solid 4px #f00;
+  border-radius:15px;
+  position: relative;
+  width: 74px;
+  height: 64px;
+  overflow: hidden;
+}
+.counter-block .counter .number {
+  line-height: 60px;
+  font-size: 55px;
+  height: 100%;
+  color: #333333;
+  position: absolute;
+}
+.counter-block .counter .number.tens {
+  left: 0;
+}
+.counter-block .counter .number.units {
+  left: 50%;
+}
+.counter-block .counter .number.hundreds {
+  display: none;
+}
+.counter-block .counter .number.show {
+  top: 0;
+  z-index: 2;
+}
+.counter-block .counter .number.hidden-down {
+  top: 100%;
+}
+.counter-block .counter .number.hidden-up {
+  top: -100%;
+  z-index: 100;
+}
+.counter-block .counter.with-hundreds {
+  width: 100px;
+}
+.counter-block .counter.with-hundreds .number {
+  width: 30.66%;
+}
+.counter-block .counter.with-hundreds .number.tens {
+  left: 33.33%;
+}
+.counter-block .counter.with-hundreds .number.units {
+  left: 66.66%;
+}
+.counter-block .counter.with-hundreds .number.hundreds {
+  display: block;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .counter-group {
+    padding-left: 195px;
+  }
+  .counter-block {
+    margin-right: 10px;
+  }
+  .counter-block .counter {
+    border:solid 2px #f00;
+    border-radius:10px;
+    width: 70px;
+    height: 55px;
+  }
+  .counter-block .counter .number {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .counter-block .counter.with-hundreds {
+    width: 85px;
+    height: 55px;
+  }
+  .counter-block .counter-caption {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .counter-group {
+    padding-left: 240px;
+  }
+  .counter-block {
+    margin-right: 10px;
+  }
+  .counter-block .counter {
+    border:solid 2px #f00;
+    border-radius:10px;
+    width: 90px;
+    height: 75px;
+  }
+  .counter-block .counter .number {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  .counter-block .counter.with-hundreds {
+    width: 110px;
+    height: 75px;
+  }
+  .counter-block .counter-caption {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .counter-group {
+    padding-left: 85px;
+  }
+  .counter-block {
+    margin-right: 8px;
+  }
+  .counter-block .counter {
+    border:solid 1px #f00;
+    border-radius:6px;
+    width: 32px;
+    height: 27px;
+  }
+  .counter-block .counter .number {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .counter-block .counter.with-hundreds {
+    height: 27px;
+    width: 40px;
+  }
+
+  .counter-block .counter-caption {
+    font-size: 15px;
+  }
+
+}
+/******时间表的数字********/
+
+
+
+
+/******背景********/
+
+.zerogrid{
+    margin: 0px 5px 15px 0px;
+    padding: 20px 0px 0px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+
+    background: url(/static/images/index/header-love-bg.png) no-repeat center;
+    background-size: 85%;
+    width:100%;
+    position: relative;
+    margin-left: 0px;
+}
+/******背景********/
+.zerogrid .head-h1 {
+    font-size:32px;
+    height: 44px;
+}
+
+
+@media (max-width: 1024px) {
+    .zerogrid {
+        height:750px;
+    }
+
+    .zerogrid .tiancong {
+        height: 220px;
+    }
+
+	.zerogrid .head-h1 {
+        font-size:55px;
+        text-align:left;
+        height: 105px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .zerogrid {
+        height:570px;
+    }
+
+    .zerogrid .tiancong {
+        height: 160px;
+    }
+
+	.zerogrid .head-h1 {
+        font-size:45px;
+        text-align:left;
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .zerogrid {
+        height:330px;
+    }
+
+    .zerogrid .tiancong {
+        height: 100px;
+    }
+
+	.zerogrid .head-h1 {
+        font-size:24px;
+        text-align:left;
+        height: 40px;
+    }
+}
+
