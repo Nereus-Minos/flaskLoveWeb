@@ -95,7 +95,48 @@ section .container .row .col-sm-12 .section-heading {
 </script>
 <!-- 无缝滚动 -->
 
+<!--音频-->
+    <script type="text/javascript">
+        $(function(){
+            //播放完毕
+            $('#mp3Btn').on('ended', function() {
+                console.log("音频已播放完成");
+                $('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
+            })
+            //播放器控制
+            var audio = document.getElementById('mp3Btn');
+            audio.volume = .3;
+            $('.btn-audio').click(function() {
+                event.stopPropagation();//防止冒泡
+                if(audio.paused){ //如果当前是暂停状态
+                    $('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
+                    audio.play(); //播放
+                    return;
+                }else{//当前是播放状态
+                    $('.btn-audio').css({'background':'url(/static/music/diepian.gif) no-repeat center bottom','background-size':'cover'});
+                    audio.pause(); //暂停
+                }
+            });
+        })
+    </script>
+<!--音频-->
 
+<!--头文字-->
+<script type="text/javascript">
+$(function(){
+	var text = "光阴似箭、岁月如梭，\
+				日月星辰，一年又一年，\
+				我们又要开启新的篇章！\
+				虽然我太啰嗦哈，但是你确实还是那个你！\
+				大黑車！！！";
+	var index=0;
+
+	setInterval(function() {
+		$('#say').text(text.substring(0,index++));
+	}, 200);
+})
+</script>
+<!--头文字-->
 </head>
 
 
@@ -136,8 +177,17 @@ section .container .row .col-sm-12 .section-heading {
    <header >
         <div class="wrap-header">
             <div class="main-header">
-
+				<div class="btn-audio">
+					<audio autoplay id="mp3Btn">
+						<source src="/static/music/1.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<div class="header-h-text">
+					亲爱的臭車婆：
+				</div>
+					<div id="say" class="header-say-text"></div>
             </div>
+
         </div>
 
     </header>
@@ -145,16 +195,20 @@ section .container .row .col-sm-12 .section-heading {
 
 <!--	时间表-->
 <section class="bride-groom-area">
-    <div class="container">
-        <div class="row">
-			<div class="zerogrid">
-				<div class="tiancong"></div>
-				<div class="head-h1" style="text-align:center">我们相恋已有：</div>
-				<div class="counter">
+	<div class="container">
+		<div class="row" style="margin: 10px 0px;">
+			<div class="col-sm-12 text-center">
+				<h2 class="section-heading">相濡以沫</h2>
+				<img class="heading-divider" src="static/images/index/divider.png" alt="divider">
+
+				<div class="zerogrid">
+					<div class="tiancong"></div>
+					<div class="head-h1" style="text-align:center">我们相恋已有：</div>
+					<div class="counter">
 					<div class="centered text-center" id="myCounter"></div>
 				</div>
 			</div>
-	</div>
+		</div>
     </div>
 </section>
 <!--	时间表-->
@@ -350,47 +404,80 @@ section .container .row .col-sm-12 .section-heading {
 			</div>
         </div>
 		<div class="row">
-			<div  class="zhiduanqingchang">
-				<ul style="padding-left: 20px;">
-					<li>
-						<div class="text_H1">
-							<h4 align="center">学校的我们</h4>
-							<h5>未完待续...<a href="">更多</a></h5>
-						</div>
-					</li>
-					<li>
-						<img src="/static/images/index/zhiduanqingchang/new-1.gif">
-					</li>
-					<li class="text_D">
-						<div class="text_H1" >
-							<h4 align="center">社会的我们</h4>
-							<h5>未完待续...<a href="">更多</a></h5>
-						</div>
-					</li>
-					<li>
-						<img src="/static/images/index/zhiduanqingchang/new-4.gif">
-					</li>
-				</ul>
-				<ul style="padding-right: 20px; padding-left: 20px;">
-					<li>
-						<img src="/static/images/index/zhiduanqingchang/new-3.gif">
-					</li>
-					<li class="text_D">
-						<div class="text_H2">
-							<h4 align="center">家里的我们</h4>
-							<h5>未完待续...<a href="">更多</a></h5>
-						</div>
-					</li>
-					<li>
-						<img src="/static/images/index/zhiduanqingchang/new-2.gif">
-					</li>
-					<li class="text_D">
-						<div class="text_H2">
-							<h4 align="center">未来的我们</h4>
-							<h5>未完待续...<a href="">更多</a></h5>
-						</div>
-					</li>
-				</ul>
+<!--			<div  class="zhiduanqingchang">-->
+<!--				<ul class="ul1">-->
+<!--					<li>-->
+<!--						<div class="text_H1">-->
+<!--							<h4 align="center">①学校的我们</h4>-->
+<!--							<h5>未完待续...<a href="">更多</a></h5>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img class="img1" src="/static/images/index/zhiduanqingchang/new-1.gif">-->
+<!--					</li>-->
+<!--					<li class="text_D">-->
+<!--						<div class="text_H1" >-->
+<!--							<h4 align="center">③社会的我们</h4>-->
+<!--							<h5>未完待续...<a href="">更多</a></h5>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img class="img1" src="/static/images/index/zhiduanqingchang/new-4.gif">-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--				<ul class="ul2">-->
+<!--					<li>-->
+<!--						<img class="img2" src="/static/images/index/zhiduanqingchang/new-3.gif">-->
+<!--					</li>-->
+<!--					<li class="text_D">-->
+<!--						<div class="text_H2">-->
+<!--							<h4 align="center">②家里的我们</h4>-->
+<!--							<h5>未完待续...<a href="">更多</a></h5>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img class="img2" src="/static/images/index/zhiduanqingchang/new-2.gif">-->
+<!--					</li>-->
+<!--					<li class="text_D">-->
+<!--						<div class="text_H2">-->
+<!--							<h4 align="center">④未来的我们</h4>-->
+<!--							<h5>未完待续...<a href="">更多</a></h5>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--			</div>-->
+		</div>
+		<div class="row">
+			<div class="zhiduanqingchang">
+				<img  src="/static/images/index/last-zhiduanqingchang.png">
+				<div  class="zhiduanqingchang-text">
+					<ul>
+						<li class="li1">
+							①学校的我们
+						</li>
+						<li class="li2">
+								未完待续...<a href="">更多</a>
+						</li>
+						<li class="li1">
+							②家里的我们
+						</li>
+						<li class="li2">
+								未完待续...<a href="">更多</a>
+						</li>
+						<li class="li1">
+							③社会的我们
+						</li>
+						<li class="li2">
+								未完待续...<a href="">更多</a>
+						</li>
+						<li class="li1">
+							④未来的我们
+						</li>
+						<li class="li2">
+								未完待续...<a href="">更多</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
     </div>
