@@ -1,0 +1,55 @@
+
+.rsvp-area .container #school {
+
+    margin: 10px 0px 15px 0px;
+    padding: 10px 10px 0px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    overflow:hidden;
+    zoom:1;
+}
+
+.rsvp-area .container #school #school-section {
+
+    overflow: hidden;
+    height: 220px;
+}
+
+.rsvp-area .container #school #school-section #youandme{
+    width: 345px; /*根据school来的*/
+    background: #eee;
+    white-space: nowrap;/*文本不会换行，文本会在在同一行上继续*/
+}
+
+.rsvp-area .container #school #school-section #youandme .school-box {
+    width: 100%;
+    height: 210px;
+    padding:5px;
+    background: #eee;
+    display: inline-block;/*行内块元素*/
+}
+
+.rsvp-area .container #school #school-section #youandme .school-box img{
+ width:24%;
+ float:left;
+}
+
+.rsvp-area .container #school #school-section #youandme .school-box div{
+ width:70%;
+ height: 100px;
+ float:left;
+ margin-left: 10px;
+ white-space:normal; word-break:break-all;
+}
+
+.rsvp-area .container #school #school-section #youandme .school-box .scroll-dian{
+    padding-top: 90px;
+    width: 40%;
+}
+
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+/*.box::-webkit-scrollbar{
+    display: none;
+}*/
+
+

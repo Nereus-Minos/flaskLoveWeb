@@ -2,11 +2,11 @@ import os
 from PIL import Image
 
 ext = ['jpg', 'jpeg', 'png']
-files = os.listdir('./index/zhiduanqingchang')
+files = os.listdir('./index/home-setion')
 
 
-def process_image(filename, mwidth=600, mheight=284):
-    image = Image.open('./index/zhiduanqingchang/' + filename)
+def process_image(filename, mwidth=300, mheight=400):
+    image = Image.open('./index/home-setion/' + filename)
     w, h = image.size
     if w <= mwidth and h <= mheight:
         print(filename, 'is OK.')
@@ -18,7 +18,7 @@ def process_image(filename, mwidth=600, mheight=284):
     else:
         scale = 1.0 * h / mheight
         new_im = image.resize((int(w / scale), int(h / scale)), Image.ANTIALIAS)
-    new_im.save('./index/zhiduanqingchang/new-' + filename)
+    new_im.save('./index/home-setion/new-' + filename)
     new_im.close()
 
 

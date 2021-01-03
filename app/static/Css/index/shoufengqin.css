@@ -1,0 +1,98 @@
+
+#accordion{
+    width:346px; /*影响最后一个*/
+    height:248px;
+    position:relative;
+    overflow:hidden;
+    border:3px solid #CCC;
+    border-radius: 10px;
+
+    margin: 10px 10px 15px 10px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    overflow:hidden;
+    zoom:1;
+}
+#accordion ul{
+    list-style:none;
+}
+#accordion ul li{
+    height:100%;
+    position:absolute;
+}
+
+
+#accordion ul li span{
+    display:block;
+    width:20px; height:100%;
+    float:left;
+    text-align:center;
+    color:#FFF;
+    padding-top:5px;
+    cursor:pointer;
+}
+
+#accordion ul li img{
+    width:140px;
+}
+
+.bar01{
+    left:0px;
+}
+.bar02{
+    left:160px;
+}
+.bar03{
+    left:180px;
+}
+.bar04{
+    left:200px;
+}
+.bar05{
+    left:220px;
+}
+.bar06{
+    left:240px;
+}
+.bar07{
+    left:260px;
+}
+.bar08{
+    left:280px;
+}
+.bar09{
+    left:300px;
+}
+.bar10{
+    left:320px;
+}
+.bar01 span{
+    background:#f3f0e6;
+}
+.bar04 span{
+    background:#f6d6ff;
+}
+.bar03 span{
+    background:#efcee8;
+}
+.bar02 span{
+    background:#e8d1e7;
+}
+.bar06 span{
+    background:#c7b3e5;
+}
+.bar07 span{
+    background:#b49cf0;
+}
+.bar08 span{
+    background:#7774b7;
+}
+.bar09 span{
+    background:#8977b3;
+}
+.bar05 span{
+    background:#e8d1e7;
+}
+.bar10 span{
+    background:#733c80;
+}
