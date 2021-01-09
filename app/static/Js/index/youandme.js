@@ -4,8 +4,6 @@ var d = document;
 var g = 'getElementById';
 var moveEle = d[g]('youandme');
 var section_show_width = parseInt($("#youandme").width())+5;
-  console.log("section_show_width");
-  console.log(section_show_width);
 var maxMoveWidth = (-10) * section_show_width;
 var minMoveWidth = (1) * section_show_width;
 var stx = sty = etx = ety = curX = curY = 0;

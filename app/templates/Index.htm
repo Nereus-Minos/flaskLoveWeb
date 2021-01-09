@@ -175,6 +175,24 @@ $(function(){
 	</div>
 	<!-- 导航条 -->
 
+	<!-- 左边文字动画 -->
+	<div style="position:relative ; float:left; left: 10px; top: 60px;z-index:1000">
+		<div class='biaobai' style="position:absolute ;float:left;">
+			<div>一</div>
+			<div>切</div>
+			<div>不</div>
+			<div>敢</div>
+			<div>晒</div>
+			<div>的</div>
+			<div>表</div>
+			<div>白</div>
+			<div>都</div>
+			<div>不</div>
+			<div>白</div>
+		</div>
+	</div>
+	<!-- 左边文字动画 -->
+
     <!--前半部分-->
    <header >
         <div class="wrap-header">
@@ -195,8 +213,11 @@ $(function(){
     </header>
    <!--前半部分-->
 
+
+
+
 <!--	时间表-->
-<section class="bride-groom-area">
+<section class="bride-groom-area" id="section-shijianbiao">
 	<div class="container">
 		<div class="row" style="margin: 10px 0px;">
 			<div class="col-sm-12 text-center">
@@ -220,7 +241,7 @@ $(function(){
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
 <!--	藏头诗-->
-<section class="bride-groom-area">
+<section class="bride-groom-area" id="section-cangtoushi">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
@@ -326,13 +347,12 @@ $(function(){
 <!--分割线-->
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
-<section class="bride-groom-area">
+<section class="bride-groom-area" id="section-youandme">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
                 <h2 class="section-heading">臭車 & 帅哥</h2>
                 <img class="heading-divider" src="static/images/index/divider.png" alt="divider">
-<!--                <h3 class="section-subheading">Aliquam erat volutpat. Curabitur tempor nibh quis arcu convallis, sed viverra quam sollicitudin. Proin sed augue sed neque ultricies condimentum. </h3>-->
 
             </div>
         </div>
@@ -351,8 +371,8 @@ $(function(){
                         </div>
                     </div>
                     <div class="bride-groom-content">
-                        <a href="/youme/"><h3>臭 車</h3></a>
-                        <p>未完待续。。。</p>
+                        <p>经过民主表决、层层删选，大家公认的可爱又迷人的俏皮角色</p>
+						<h4 align="right">--胡文月</h4>
 					</div>
                 </div>
             </div>
@@ -381,8 +401,8 @@ $(function(){
                         </div>
                     </div>
                     <div class="bride-groom-content">
-                        <a href="/youme/"><h3>帅 哥</h3></a>
-                        <p>未完待续。。。</p>
+                        <p>经过千锤百炼、勇闯天涯，有目共睹的帅气又活力的英雄人物</p>
+						<h4 align="right">--赵&nbsp;&nbsp;&nbsp;航</h4>
 					</div>
                 </div>
             </div>
@@ -402,13 +422,127 @@ $(function(){
             <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
                 <h2 class="section-heading">马拉松</h2>
                 <img class="heading-divider" src="static/images/index/divider.png">
+				<h3 class="section-subheading">左右滑动翻页哦..</h3>
 			</div>
         </div>
-		<div class="row">
 
+		<!--表白那会儿-->
+		<div>
+			<img id="xiangce-kaishiye" src="/static/images/index/xiangce-section/left-kaishi.png" />
+			<div id="shineflip">
+				 <div id="shineflip-pages">
+					  <canvas id="shineflip-canvas"></canvas>
+					  <canvas id="shineflip-page-mid-canvas"></canvas>
+					  <section class="page">
+						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-0.jpg" /></div>
+					  </section>
+					  <section class="page" id="left_pk" style="background:url(/static/images/index/xiangce-section/right_pk.jpg)">
+						   <div class="inner-img"><img src="/static/images/index/xiangce-section/new-1-1.jpg" style="float:right;" /></div>
+					  </section>
+					  <section class="page">
+						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-1-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-2-1.jpg" style="float:right;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-2-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-3-1.jpg" style="float:right;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-3-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-4-1.jpg" style="float:right;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-4-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-5-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-5-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-6-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-6-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-7-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-7-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-8-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-8-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-9-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-9-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-10-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-10-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-11-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-11-2.jpg" style="float:left;" /></div>
+					  </section>
+					  <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-12-1.jpg" style="float:right;" /></div>
+					  </section>
+					 <section class="page">
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-12-2.jpg" style="float:left;" /></div>
+					  </section>
+					 <!--最后一页-->
+					 <section class="page">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-13-1.jpg" style="float:right;" /></div>
+					  </section>
+					  <section class="page" id="right_pk" style="background:url(/static/images/index/xiangce-section/right_pk.jpg)">
+							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-13-2.jpg" style="float:left;" /></div>
+					  </section>
+					 <!--封面-->
+					  <section class="page">
+						   <div class="outer-img"><img src="/static/images/index/xiangce-section/24.jpg"  /></div>
+						   <span style="right:18px;"><img src="/static/images/index/xiangce-section/zh.png" /></span>
+					  </section>
+				 </div>
+			</div>
 		</div>
+
+
     </div>
 </section>
+
+
+
+<link rel="stylesheet" type="text/css" href="/static/Css/index/xiangce.css">
+<script type="text/javascript" src="/static/Js/index/xiangce_min.js"></script>
+
+<script type="text/javascript">
+var shineFlip = new ShineFlip({
+ // autoFitScreen: true,
+ width: 350,
+ height: 170,
+ page_width: 175,
+ page_height: 170
+});
+</script>
+
 <!--马拉松-->
 
 
@@ -667,7 +801,7 @@ $(function(){
             <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
                 <h2 class="section-heading">绘声绘色</h2>
                 <img class="heading-divider" src="static/images/index/divider.png">
-                <h3 class="section-subheading">未完待续..</h3>
+<!--                <h3 class="section-subheading">未完待续..</h3>-->
 				<div id="huishenghuishe-video">
 					<video muted controls loop width="320" height="240" poster="/static/video/video1.jpg" src="/static/video/index1.mp4"></video>
 				</div>
@@ -704,7 +838,7 @@ $(function(){
             <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
                 <h2 class="section-heading">祝 福</h2>
                 <img class="heading-divider" src="static/images/index/divider.png">
-                <h3 class="section-subheading">未完待续..</h3>
+<!--                <h3 class="section-subheading">未完待续..</h3>-->
             </div>
         </div>
         <div class="row">
@@ -735,23 +869,6 @@ $(function(){
 
 	<div class='container-fluid' style=" background-color: #82a6f5;">
 
-		<!-- 左边文字动画 -->
-        <div style="position:fixed ; left: 10px; top: 60px;z-index:1000">
-        	<div class='biaobai'>
-        		<div>一</div>
-        		<div>切</div>
-        		<div>不</div>
-        		<div>敢</div>
-        		<div>晒</div>
-        		<div>的</div>
-        		<div>表</div>
-        		<div>白</div>
-        		<div>都</div>
-        		<div>不</div>
-        		<div>白</div>
-        	</div>
-        </div>
-		<!-- 左边文字动画 -->
 
 		<!-- 底部向上箭头 -->
 		<div class='totop'>↑</div>

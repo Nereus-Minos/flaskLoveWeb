@@ -2,7 +2,6 @@ $(function(){
     $totop = $('.totop');
     $(window).scroll(function(){
         var iNum = $(window).scrollTop();
-        console.log(iNum);
         if(iNum>200){
             $totop.fadeIn();
         }
