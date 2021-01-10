@@ -1,10 +1,9 @@
 .btn-audio{
-    margin: 0 0 0 20px;
     width: 120px;
     height: 120px;
     background:url(/static/music/zanting.gif) no-repeat center bottom;
     background-size:cover;
-    float:left;
+    margin-left:100px;
 }
 
 
@@ -14,14 +13,13 @@
     font-size:40px;
 }
 
-.header-say-text {
-    font-size:28px;
-    line-height:50px;
-    letter-spacing:1px;
-    text-align:left;
-    width:390px;
-    padding:10px 0 0 40px;
-}
+    .header-say-text {
+        line-height:28px;
+        letter-spacing:1px;
+        text-align:left;
+        width:240px;
+        padding:10px 0 0 0px;
+    }
 
 
 /********最前面*********/
@@ -53,7 +51,6 @@ header .main-header .counter{
 	header .main-header{height:450px; background-size:100%;}
 
 	.btn-audio{
-        margin: 0 0 0 20px;
         width: 120px;
         height: 120px;
     }
@@ -64,12 +61,11 @@ header .main-header .counter{
     }
 
     .header-say-text {
-        font-size:28px;
-        line-height:50px;
+        line-height:28px;
         letter-spacing:1px;
         text-align:left;
-        width:390px;
-        padding:10px 0 0 40px;
+        width:240px;
+        padding:10px 0 0 0px;
     }
 }
 
@@ -81,7 +77,6 @@ header .main-header .counter{
 	header .main-header{height:300px; background-size:100%;}
 
 	.btn-audio{
-        margin: 0 0 0 20px;
         width: 120px;
         height: 120px;
     }
@@ -92,12 +87,11 @@ header .main-header .counter{
     }
 
     .header-say-text {
-        font-size:15px;
-        line-height:32px;
+        line-height:28px;
         letter-spacing:1px;
         text-align:left;
-        width:300px;
-        padding:10px 0 0 40px;
+        width:240px;
+        padding:10px 0 0 0px;
     }
 
 }
@@ -106,13 +100,12 @@ header .main-header .counter{
 	header .main-header{height:240px; background-size:110%;}
 
 	.btn-audio{
-        margin: 0 0 0 20px;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     .header-h-text {
-        padding: 10px 0px 0px 0px;
+        padding: 20px 0px 0px 0px;
         font-size:22px;
     }
 
@@ -120,8 +113,8 @@ header .main-header .counter{
         line-height:28px;
         letter-spacing:1px;
         text-align:left;
-        width:215px;
-        padding:10px 0 0 40px;
+        width:240px;
+        padding:10px 0 0 0px;
     }
 
 }
@@ -131,7 +124,6 @@ header .main-header .counter{
     header .main-header{height:180px; background-size:100%;}
 
     .btn-audio{
-        margin: 0 0 0 30px;
         width: 50px;
         height: 50px;
     }
