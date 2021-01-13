@@ -12,43 +12,11 @@
 <!--第三方库-->
 
 <!--公共库-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/common/daohangtiao.css">
-	<!-- 闪动文字 -->
-	<link rel="stylesheet" type="text/css" href="/static/Css/common/flashText.css">
-	<!-- 闪动文字 -->
 	<!-- 底部向上箭头 -->
 	<link rel="stylesheet" type="text/css" href="/static/Css/common/upPoint.css">
 	<script type="text/javascript" src="/static/Js/common/upPoint.js"></script>
 	<!-- 底部向上箭头 -->
 <!--公共库-->
-
-<!--index库-->
-	<!--我们的介绍-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/introducePhoto.css">
-	<!--我们的介绍-->
-	<!--滑动文字模块-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/scrollModule.css">
-	<!--滑动文字模块-->
-	<!--时间表-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/mb-comingsoon-iceberg.css">
-    <script type="text/javascript" src="/static/Js/index/jquery.mb-comingsoon.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/shijianbiao.css">
-
-	<!--时间表-->
-
-	<!--无缝滚动图片-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/zhiduanqingchang.css">
-	<!--无缝滚动图片-->
-
-	<!--纸短情长-->
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/wufenggundong.css">
-	<!--纸短情长-->
-
-
-
-	<link rel="stylesheet" type="text/css" href="/static/Css/index/Commont.css">
-
-<!--index库-->
 
 <style>
 section .container .row .col-sm-12 .section-heading {
@@ -57,87 +25,6 @@ section .container .row .col-sm-12 .section-heading {
 }
 </style>
 
-<!--无缝滚动 -->
-<script type="text/javascript">
-	window.onload = function(){
-		var oDiv = document.getElementById('slide');
-		//通过标签获取元素，获取的是选择集，加上下标才能获取到元素
-		var oUl = oDiv.getElementsByTagName('ul')[0];
-		var iLeft = 0;
-		var iSpeed = -2;
-		var iNowspeed = 0;
-		//将ul里面的内容复制一份，整个ul里面就包含了10个li
-		oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
-		function moving(){
-			iLeft += iSpeed;
-			// 当ul向左滚动到第5个li时，瞬间将整个ul拉回到初始位置
-			if(iLeft<-1651.5)
-			{
-				iLeft=0;
-			}
-			//当ul在起始位置往右滚动时候，瞬间将整个ul拉回到往左的第5个li的位置
-			if(iLeft>0)
-			{
-				iLeft = -1651.5;
-			}
-			oUl.style.left = iLeft + 'px';
-		}
-		var timer = setInterval(moving,30);
-
-		// 当鼠标移入的时候
-		oDiv.onmouseover = function(){
-			iNowspeed = iSpeed;
-			iSpeed = 0;
-		}
-		// 当鼠标移出的时候
-		oDiv.onmouseout = function(){
-			iSpeed = iNowspeed;
-		}
-	}
-</script>
-<!-- 无缝滚动 -->
-
-<!--音频-->
-    <script type="text/javascript">
-        $(function(){
-            //播放完毕
-            $('#mp3Btn').on('ended', function() {
-                console.log("音频已播放完成");
-                $('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
-            })
-            //播放器控制
-            var audio = document.getElementById('mp3Btn');
-            audio.volume = .3;
-            $('.btn-audio').click(function() {
-                event.stopPropagation();//防止冒泡
-                if(audio.paused){ //如果当前是暂停状态
-                    $('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
-                    audio.play(); //播放
-                    return;
-                }else{//当前是播放状态
-                    $('.btn-audio').css({'background':'url(/static/music/diepian.gif) no-repeat center bottom','background-size':'cover'});
-                    audio.pause(); //暂停
-                }
-            });
-        })
-    </script>
-<!--音频-->
-
-<!--头文字-->
-<script type="text/javascript">
-$(function(){
-	var text = "我们是平凡的一对，笑过、哭过，\
-				我们是不凡的一对，踏雪、过江，\
-				经得起考验，扛得住生活，今天：\
-				我们一起携手未来，吾三生有幸！";
-	var index=0;
-
-	setInterval(function() {
-		$('#say').text(text.substring(0,index++));
-	}, 200);
-})
-</script>
-<!--头文字-->
 </head>
 
 
@@ -145,6 +32,7 @@ $(function(){
 
 <body style='max-width:100%;overflow:auto;overflow-x:hidden;overflow-y:auto;height:100%;-webkit-overflow-scrolling: touch;box-sizing:border-box;'>
 	<!-- 导航条 -->
+	<link rel="stylesheet" type="text/css" href="/static/Css/common/daohangtiao.css">
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<!-- 定义logo和切换小图标   -->
@@ -175,6 +63,7 @@ $(function(){
 	<!-- 导航条 -->
 
 	<!-- 左边文字动画 -->
+	<link rel="stylesheet" type="text/css" href="/static/Css/common/flashText.css">
 	<div style="position:relative ; float:left; left: 10px; top: 60px;z-index:1000">
 		<div class='biaobai' style="position:absolute ;float:left;">
 			<div>一</div>
@@ -193,10 +82,48 @@ $(function(){
 	<!-- 左边文字动画 -->
 
     <!--前半部分-->
+	<link rel="stylesheet" type="text/css" href="/static/Css/index/mb-comingsoon-iceberg.css">
+    <script type="text/javascript" src="/static/Js/index/jquery.mb-comingsoon.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+	/*头文字*/
+		var text = "我们是平凡的一对，笑过、哭过，\
+					我们是不凡的一对，踏雪、过江，\
+					经得起考验，扛得住生活，今天：\
+					我们一起携手未来，吾三生有幸！";
+		var index=0;
+
+		setInterval(function() {
+			$('#say').text(text.substring(0,index++));
+		}, 200);
+	/*头文字*/
+
+	/*音频*/
+	 	//播放完毕
+		$('#mp3Btn').on('ended', function() {
+			console.log("音频已播放完成");
+			$('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
+		})
+		//播放器控制
+		var audio = document.getElementById('mp3Btn');
+		audio.volume = .3;
+		$('.btn-audio').click(function() {
+			event.stopPropagation();//防止冒泡
+			if(audio.paused){ //如果当前是暂停状态
+				$('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
+				audio.play(); //播放
+				return;
+			}else{//当前是播放状态
+				$('.btn-audio').css({'background':'url(/static/music/diepian.gif) no-repeat center bottom','background-size':'cover'});
+				audio.pause(); //暂停
+			}
+		});
+	/*音频*/
+})
+</script>
    <header >
         <div class="wrap-header">
             <div class="main-header">
-
 				<div class="header-h-text" style="float:left;">
 					臭車婆：
 				</div>
@@ -208,9 +135,7 @@ $(function(){
 				<div id="say" class="header-say-text"></div>
 
             </div>
-
         </div>
-
     </header>
    <!--前半部分-->
 
@@ -218,6 +143,7 @@ $(function(){
 
 
 <!--	时间表-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/shijianbiao.css">
 <section class="bride-groom-area" id="section-shijianbiao">
 	<div class="container">
 		<div class="row" style="margin: 10px 0px;">
@@ -241,6 +167,7 @@ $(function(){
 <!--分割线-->
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/scrollModule.css">
 <!--	藏头诗-->
 <section class="bride-groom-area" id="section-cangtoushi">
     <div class="container">
@@ -348,6 +275,7 @@ $(function(){
 <!--分割线-->
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/introducePhoto.css">
 <section class="bride-groom-area" id="section-youandme">
     <div class="container">
         <div class="row">
@@ -549,7 +477,7 @@ var shineFlip = new ShineFlip({
 
 <!---纸短情长-->
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
-
+<link rel="stylesheet" type="text/css" href="/static/Css/index/wufenggundong.css">
 <section class="rsvp-area">
     <div class="container">
         <div class="row">
@@ -757,16 +685,31 @@ var shineFlip = new ShineFlip({
 <HR  style="text-align:center" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
 <!--社会的我们-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/3Dxiangce.css">
 <section class="rsvp-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center" style="width:100%;padding-left: 0px;">
                 <h2 class="section-heading">社会的我们</h2>
                 <img class="heading-divider" src="static/images/index/divider.png">
-                <h3 class="section-subheading">未完待续...</h3>
+                <h4 class="section-subheading">社会的洗礼让我们明白了柴米油盐有多重要...</h4>
             </div>
         </div>
-		<div class="row"></div>
+		<div class="threeDXiangceSection" id="DXiangceSection">
+			<div class="di">
+				<div class="z">
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/1.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/2.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/3.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/4.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/5.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/6.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/7.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/8.jpg"></p >
+					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/9.jpg"></p >
+				</div>
+			</div>
+		</div>
     </div>
 </section>
 <!--社会的我们-->
@@ -784,9 +727,6 @@ var shineFlip = new ShineFlip({
                 <h3 class="section-subheading">未完待续...</h3>
             </div>
         </div>
-		<div class="row">
-
-		</div>
     </div>
 </section>
 <!--未来的我们-->
@@ -796,6 +736,8 @@ var shineFlip = new ShineFlip({
 <HR  style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
 <!--	视频流-->
+<!--无缝滚动图片-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/zhiduanqingchang.css">
 <section class="rsvp-area">
     <div class="container">
         <div class="row">
@@ -832,6 +774,7 @@ var shineFlip = new ShineFlip({
 <!--分割线-->
 <HR  style="text-align:center" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
 <!--分割线-->
+<link rel="stylesheet" type="text/css" href="/static/Css/index/Commont.css">
 <!--	祝福-->
 <section class="rsvp-area">
     <div class="container">
@@ -869,12 +812,9 @@ var shineFlip = new ShineFlip({
 <!--	祝福-->
 
 	<div class='container-fluid' style=" background-color: #82a6f5;">
-
-
 		<!-- 底部向上箭头 -->
 		<div class='totop'>↑</div>
 		<!-- 底部向上箭头 -->
-
 		<!-- 底部 -->
 		<div class="container" id="page">
 			<div style="text-align: center; margin: 40px 0 20px">
@@ -883,8 +823,238 @@ var shineFlip = new ShineFlip({
 			<!-- footer -->
 		</div>
 		<!-- 底部 -->
-
 	</div>
+
+<script type="text/javascript">
+/*3D相册*/
+   //给每个p标签设置位置  //300控制着两个P之间的距离   //40控制着P个数   p_num=360/40
+    function setPs() {
+        var ps = document.getElementsByClassName('threeDXiangceSection')[0].getElementsByClassName('di')[0].getElementsByClassName('z')[0].getElementsByTagName('p');
+        for (var i = 0; i < ps.length; i++) {
+            ps[i].style.transform = 'rotatex(-90deg) rotatey(' + i * 40 + 'deg) translatez(150px)'
+        }
+    }
+    //拖动旋转
+    function move() {
+        var zBox = document.querySelector('.z');
+        var xBox = document.querySelector('.di');
+        //声明计算移动速度用的变量
+        var speedTimer = null;
+        var speedX = 0;
+        var speedY = 0;
+        //声明记录旋转角度的两个变量
+        var xDegNow = 82;
+        var zDegNow = 0;
+        //声明变量记录要旋转的角度
+        var xDegDistance = 0;
+        var zDegDistance = 0;
+        //声明变量记录是否发生鼠标移动事件
+        var isMove = false;
+
+		  /*触摸滑动*/
+		    document.getElementById("DXiangceSection").addEventListener('touchstart',touch, false);
+            document.getElementById("DXiangceSection").addEventListener('touchmove',touch,  {passive: false});
+            document.getElementById("DXiangceSection").addEventListener('touchend',touch, false);
+		  var xstart = 0;
+		  var speedX_start = xstart;
+		  var ystart = 0;
+		  var speedY_start = ystart;
+		  var tstart = 0;
+		  var tnow = tstart;
+		  function touch (e){
+            e.preventDefault();
+		   switch(e.type){
+			case "touchstart":
+			 //清除过渡属性
+			 xBox.style.transition = '';
+			 zBox.style.transition = '';
+			 //记录按下的坐标以及计算速度的初始坐标
+			 xstart = e.touches[0].clientX;
+			 speedX_start = xstart;
+			 ystart = e.touches[0].clientY;
+			 speedY_start = ystart;
+			 //记录用来计算速度的初始时间
+			 tstart = new Date().getTime();
+			 tnow = tstart;
+			 //设置计时器更新计算速度的当时时间
+			 speedTimer = setInterval(function () {
+			  tnow = new Date().getTime();
+			 },10);
+			 break;
+			case "touchmove":
+			 isMove = true;
+			 //记录当时的坐标计算距离
+			 var xnow = e.touches[0].clientX;
+			 var ynow = e.touches[0].clientY;
+			 var xDistance = xnow - xstart;
+			 var yDistance = ynow - ystart;
+			 //如果计时超过一定时间（10毫秒），计算速度
+			 if (tnow - tstart >= 10) {
+			  //速度=（现在的坐标-初始坐标）/（现在时间-初始时间）
+			  speedX = (xnow - speedX_start) / (tnow - tstart);
+			  speedY = (ynow - speedY_start) / (tnow - tstart);
+			  //让初始时间和坐标等于现在的时间和坐标
+			  tstart = tnow;
+			  speedX_start = xnow;
+			  speedY_start = ynow;
+			 }
+			 //把移动距离计算成角度后设置到页面上
+			 zDegDistance = zDegNow - (xDistance / 10);
+			 zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
+			 xDegDistance = xDegNow - (yDistance / 10);
+			 xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+			 xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
+			 break;
+			case "touchend":
+			 //清除计时器 清除鼠标移动事件
+			 clearTimeout(speedTimer);
+			 //window.onmousemove = null;
+			 //判断如果发生移动
+			 if (isMove) {
+			  //添加过渡属性
+			  xBox.style.transition = 'all 0.5s ease-out';
+			  zBox.style.transition = 'all 0.5s ease-out';
+			  //根据速度计算目标角度，设置到页面上
+			  zDegDistance = zDegDistance - (speedX * 10);
+			  zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
+			  xDegDistance = xDegDistance - (speedY * 10);
+			  xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+			  xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
+			  //记录当前角度的值更新
+			  xDegNow = xDegDistance;
+			  zDegNow = zDegDistance;
+			  //用到的变量重置
+			  isMove = false;
+			  speedX = 0;
+			  speedY = 0;
+			  xDegDistance = 0;
+			  zDegDistance = 0;
+			 }
+			 break;
+		   }
+
+		  }
+		  /*触摸滑动*/
+
+        window.onmousedown = function (e) {
+            //鼠标按下
+            //清除过渡属性
+            xBox.style.transition = '';
+            zBox.style.transition = '';
+            //记录按下的坐标以及计算速度的初始坐标
+            var xstart = e.clientX;
+            var speedX_start = xstart;
+            var ystart = e.clientY;
+            var speedY_start = ystart;
+            //记录用来计算速度的初始时间
+            var tstart = new Date().getTime();
+            var tnow = tstart;
+            //设置计时器更新计算速度的当时时间
+            speedTimer = setInterval(function () {
+                tnow = new Date().getTime();
+            },10)
+            window.onmousemove = function (e) {
+                //鼠标移动
+                isMove = true;
+                //记录当时的坐标计算距离
+                var xnow = e.clientX;
+                var ynow = e.clientY;
+                var xDistance = xnow - xstart;
+                var yDistance = ynow - ystart;
+                //如果计时超过一定时间（10毫秒），计算速度
+                if (tnow - tstart >= 10) {
+                    //速度=（现在的坐标-初始坐标）/（现在时间-初始时间）
+                    speedX = (xnow - speedX_start) / (tnow - tstart);
+                    speedY = (ynow - speedY_start) / (tnow - tstart);
+                    //让初始时间和坐标等于现在的时间和坐标
+                    tstart = tnow;
+                    speedX_start = xnow;
+                    speedY_start = ynow;
+                }
+                //把鼠标移动距离计算成角度后设置到页面上
+                zDegDistance = zDegNow - (xDistance / 10);
+                zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
+                xDegDistance = xDegNow - (yDistance / 10);
+                xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+                xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
+            };
+        };
+        window.onmouseup = function (e) {
+            //鼠标松开
+            //清除计时器 清除鼠标移动事件
+            clearTimeout(speedTimer);
+            window.onmousemove = null;
+            //判断如果发生移动
+            if (isMove) {
+                //添加过渡属性
+                xBox.style.transition = 'all 0.5s ease-out';
+                zBox.style.transition = 'all 0.5s ease-out';
+                //根据速度计算目标角度，设置到页面上
+                zDegDistance = zDegDistance - (speedX * 10);
+                zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
+                xDegDistance = xDegDistance - (speedY * 10);
+                xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+                xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
+                //记录当前角度的值更新
+                xDegNow = xDegDistance;
+                zDegNow = zDegDistance;
+                //用到的变量重置
+                isMove = false;
+                speedX = 0;
+                speedY = 0;
+                xDegDistance = 0;
+                zDegDistance = 0;
+            }
+        };
+    }
+/*3D相册*/
+
+
+	window.onload = function(){
+/*无缝滚动图片*/
+		var oDiv = document.getElementById('slide');
+		//通过标签获取元素，获取的是选择集，加上下标才能获取到元素
+		var oUl = oDiv.getElementsByTagName('ul')[0];
+		var iLeft = 0;
+		var iSpeed = -2;
+		var iNowspeed = 0;
+		//将ul里面的内容复制一份，整个ul里面就包含了10个li
+		oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+		function moving(){
+			iLeft += iSpeed;
+			// 当ul向左滚动到第5个li时，瞬间将整个ul拉回到初始位置
+			if(iLeft<-1651.5)
+			{
+				iLeft=0;
+			}
+			//当ul在起始位置往右滚动时候，瞬间将整个ul拉回到往左的第5个li的位置
+			if(iLeft>0)
+			{
+				iLeft = -1651.5;
+			}
+			oUl.style.left = iLeft + 'px';
+		}
+		var timer = setInterval(moving,30);
+
+		// 当鼠标移入的时候
+		oDiv.onmouseover = function(){
+			iNowspeed = iSpeed;
+			iSpeed = 0;
+		}
+		// 当鼠标移出的时候
+		oDiv.onmouseout = function(){
+			iSpeed = iNowspeed;
+		}
+/*无缝滚动图片*/
+
+/*3D相册*/
+		setPs();
+        move();
+/*3D相册*/
+	}
+</script>
+
+
 
 </body>
 </html>
