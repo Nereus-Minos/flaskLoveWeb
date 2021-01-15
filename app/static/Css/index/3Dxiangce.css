@@ -1,6 +1,6 @@
 .threeDXiangceSection {
     position: relative;
-    margin: 80px 0 40px 160px;
+    margin: 85px 0 45px 160px;
     transform-style: preserve-3d;
     perspective: 2000px;
 }

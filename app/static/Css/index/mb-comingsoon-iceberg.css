@@ -1,7 +1,7 @@
 .btn-audio{
     width: 120px;
     height: 120px;
-    background:url(/static/music/zanting.gif) no-repeat center bottom;
+    background:url(/static/music/diepian.gif) no-repeat center bottom;
     background-size:cover;
     margin-left:100px;
 }
@@ -23,32 +23,30 @@
 
 
 /********最前面*********/
+/*
 header .main-header{
     background: url(/static/images/index/new-header-bg.png) no-repeat center 0px;
     background-color: #fff;
-    //color:#fff;
-    height: 550px;
     min-height: 150px;
     text-align: center;
     padding-top: 0px;
+    background-size:100%;
 }
 
 header .main-header .counter{
     padding: 5px 0px 0px 0px;
-}
-
-
+}*/
 
 @media only screen and (min-width: 960px) {
-	header .main-header{background-size:100%;}
+	header .main-header{height:550px;}
 }
 
 @media only screen and (min-width: 840px) and (max-width: 959px) {
-	header .main-header{height:500px; background-size:100%;}
+	header .main-header{height:500px;}
 }
 
 @media (max-width: 768px) {
-	header .main-header{height:450px; background-size:100%;}
+	header .main-header{height:450px;}
 
 	.btn-audio{
         width: 120px;
@@ -56,7 +54,7 @@ header .main-header .counter{
     }
 
     .header-h-text {
-        padding: 10px 0px 0px 0px;
+        padding: 10px 0px 0px 5px;
         font-size:40px;
     }
 
@@ -65,16 +63,16 @@ header .main-header .counter{
         letter-spacing:1px;
         text-align:left;
         width:240px;
-        padding:10px 0 0 0px;
+        padding:0px 0 0 5px;
     }
 }
 
 @media only screen and (min-width: 670px) and (max-width: 767px) {
-	header .main-header{height:400px; background-size:100%;}
+	header .main-header{height:400px;}
 }
 
 @media (max-width: 669px) {
-	header .main-header{height:300px; background-size:100%;}
+	header .main-header{height:300px;}
 
 	.btn-audio{
         width: 120px;
@@ -82,7 +80,7 @@ header .main-header .counter{
     }
 
     .header-h-text {
-        padding: 10px 0px 0px 0px;
+        padding: 10px 0px 0px 5px;
         font-size:25px;
     }
 
@@ -91,13 +89,13 @@ header .main-header .counter{
         letter-spacing:1px;
         text-align:left;
         width:240px;
-        padding:10px 0 0 0px;
+        padding:0px 0 0 5px;
     }
 
 }
 
 @media (max-width: 480px) {
-	header .main-header{height:240px; background-size:110%;}
+	header .main-header{height:240px;}
 
 	.btn-audio{
         width: 60px;
@@ -105,7 +103,7 @@ header .main-header .counter{
     }
 
     .header-h-text {
-        padding: 20px 0px 0px 0px;
+        padding: 20px 0px 0px 5px;
         font-size:22px;
     }
 
@@ -114,14 +112,14 @@ header .main-header .counter{
         letter-spacing:1px;
         text-align:left;
         width:240px;
-        padding:10px 0 0 0px;
+        padding:0px 0 0 5px;
     }
 
 }
 
 
 @media (max-width: 369px) {
-    header .main-header{height:180px; background-size:100%;}
+    header .main-header{height:180px;}
 
     .btn-audio{
         width: 50px;
@@ -129,7 +127,7 @@ header .main-header .counter{
     }
 
     .header-h-text {
-        padding: 10px 0px 5px 0px;
+        padding: 0px 0px 5px 5px;
         font-size:18px;
     }
 
@@ -138,6 +136,6 @@ header .main-header .counter{
         letter-spacing:1px;
         text-align:left;
         width:215px;
-        padding:0px 0 0 40px;
+        padding:0px 0 0 5px;
     }
 }

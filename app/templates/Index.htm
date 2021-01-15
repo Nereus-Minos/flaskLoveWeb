@@ -24,7 +24,6 @@ section .container .row .col-sm-12 .section-heading {
     margin-bottom: 0px;
 }
 </style>
-
 </head>
 
 
@@ -64,7 +63,7 @@ section .container .row .col-sm-12 .section-heading {
 
 	<!-- 左边文字动画 -->
 	<link rel="stylesheet" type="text/css" href="/static/Css/common/flashText.css">
-	<div style="position:relative ; float:left; left: 10px; top: 60px;z-index:1000">
+	<div style="position:relative ; float:left; left: 10px; top: 240px;z-index:1000">
 		<div class='biaobai' style="position:absolute ;float:left;">
 			<div>一</div>
 			<div>切</div>
@@ -110,11 +109,11 @@ $(function(){
 		$('.btn-audio').click(function() {
 			event.stopPropagation();//防止冒泡
 			if(audio.paused){ //如果当前是暂停状态
-				$('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
+				$('.btn-audio').css({'background':'url(/static/music/diepian.gif) no-repeat center bottom','background-size':'cover'});
 				audio.play(); //播放
 				return;
 			}else{//当前是播放状态
-				$('.btn-audio').css({'background':'url(/static/music/diepian.gif) no-repeat center bottom','background-size':'cover'});
+				$('.btn-audio').css({'background':'url(/static/music/zanting.gif) no-repeat center bottom','background-size':'cover'});
 				audio.pause(); //暂停
 			}
 		});
@@ -123,23 +122,22 @@ $(function(){
 </script>
    <header >
         <div class="wrap-header">
-            <div class="main-header">
-				<div class="header-h-text" style="float:left;">
+            <div class="main-header" style="position:relative;">
+				<img src="/static/images/index/loading.gif" data-src="/static/images/index/new-header-bg.png" style="position:absolute; width:100%;"/>
+				<div class="header-h-text" style="float:left;position:relative;">
 					臭車婆：
 				</div>
-				<div class="btn-audio">
+				<div class="btn-audio" style="position:relative;">
 					<audio autoplay id="mp3Btn">
 						<source src="/static/music/1.mp3" type="audio/mpeg">
 					</audio>
 				</div>
-				<div id="say" class="header-say-text"></div>
+				<div id="say" class="header-say-text" style="position:relative;"></div>
 
             </div>
         </div>
     </header>
    <!--前半部分-->
-
-
 
 
 <!--	时间表-->
@@ -149,9 +147,10 @@ $(function(){
 		<div class="row" style="margin: 10px 0px;">
 			<div class="col-sm-12 text-center">
 				<h2 class="section-heading">相濡以沫</h2>
-				<img class="heading-divider" src="static/images/index/divider.png" alt="divider">
+				<img class="heading-divider" src="/static/images/index/loading.gif" data-src="static/images/index/divider.png" alt="divider">
 
-				<div class="zerogrid">
+				<div class="zerogrid" style="position:relative;">
+					<img src="/static/images/index/header-love-bg.png" style="position:absolute; width:100%; left:0px;"/>
 					<div class="tiancong"></div>
 					<div class="head-h1" style="text-align:center">我们相恋已有：</div>
 					<div class="counter">
@@ -163,6 +162,7 @@ $(function(){
 </section>
 <!--	时间表-->
 
+<script></script>
 
 <!--分割线-->
 <HR style="text-align:right" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
@@ -291,7 +291,7 @@ $(function(){
             <div class="col-12 col-sm-6 col-md-6 col-lg-5">
                 <div class="bride-groom-box">
                     <div class="bride-groom-photo position-relative">
-                        <div class="bride-photo-box position-relative"><img src="static/images/index/chounv.jpg" alt="Bride"></div>
+                        <div class="bride-photo-box position-relative"><img src="/static/images/index/loading.gif" data-src="static/images/index/chounv.jpg" alt="Bride"></div>
                         <div class="bride-border-box">
                             <span class="bride-groom-border"></span>
                             <span class="bride-groom-border"></span>
@@ -321,7 +321,7 @@ $(function(){
             <div class="col-12 col-sm-6 col-md-6 col-lg-5">
                 <div class="bride-groom-box">
                     <div class="bride-groom-photo position-relative">
-                        <div class="bride-photo-box position-relative"><img src="static/images/index/shuaige.jpg" alt="Groom"></div>
+                        <div class="bride-photo-box position-relative"><img src="/static/images/index/loading.gif" data-src="static/images/index/shuaige.jpg" alt="Groom"></div>
                         <div class="bride-border-box">
                             <span class="bride-groom-border"></span>
                             <span class="bride-groom-border"></span>
@@ -363,91 +363,91 @@ $(function(){
 					  <canvas id="shineflip-canvas"></canvas>
 					  <canvas id="shineflip-page-mid-canvas"></canvas>
 					  <section class="page">
-						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-0.jpg" /></div>
+						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-0.jpg" /></div>
 					  </section>
 					  <section class="page" id="left_pk" style="background:url(/static/images/index/xiangce-section/right_pk.jpg)">
-						   <div class="inner-img"><img src="/static/images/index/xiangce-section/new-1-1.jpg" style="float:right;" /></div>
+						   <div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-1-1.jpg" style="float:right;" /></div>
 					  </section>
 					  <section class="page">
-						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-1-2.jpg" style="float:left;" /></div>
+						   <div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-1-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-2-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-2-1.jpg" style="float:right;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-2-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-2-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-3-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-3-1.jpg" style="float:right;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-3-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-3-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-4-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-4-1.jpg" style="float:right;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-4-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-4-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-5-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-5-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-5-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-5-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-6-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-6-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-6-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-6-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-7-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-7-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-7-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-7-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-8-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-8-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-8-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-8-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-9-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-9-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-9-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-9-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-10-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-10-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-10-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-10-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-11-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-11-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-11-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-11-2.jpg" style="float:left;" /></div>
 					  </section>
 					  <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-12-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-12-1.jpg" style="float:right;" /></div>
 					  </section>
 					 <section class="page">
-							<div class="inner-img"><img class="need-shadow" src="/static/images/index/xiangce-section/new-12-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img class="need-shadow" src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-12-2.jpg" style="float:left;" /></div>
 					  </section>
 					 <!--最后一页-->
 					 <section class="page">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-13-1.jpg" style="float:right;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-13-1.jpg" style="float:right;" /></div>
 					  </section>
 					  <section class="page" id="right_pk" style="background:url(/static/images/index/xiangce-section/right_pk.jpg)">
-							<div class="inner-img"><img src="/static/images/index/xiangce-section/new-13-2.jpg" style="float:left;" /></div>
+							<div class="inner-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/new-13-2.jpg" style="float:left;" /></div>
 					  </section>
 					 <!--封面-->
 					  <section class="page">
-						   <div class="outer-img"><img src="/static/images/index/xiangce-section/24.jpg"  /></div>
-						   <span style="right:18px;"><img src="/static/images/index/xiangce-section/zh.png" /></span>
+						   <div class="outer-img"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/24.jpg"  /></div>
+						   <span style="right:18px;"><img src="/static/images/index/loading.gif" data-src="/static/images/index/xiangce-section/zh.png" /></span>
 					  </section>
 				 </div>
 			</div>
@@ -456,8 +456,6 @@ $(function(){
 
     </div>
 </section>
-
-
 
 <link rel="stylesheet" type="text/css" href="/static/Css/index/xiangce.css">
 <script type="text/javascript" src="/static/Js/index/xiangce_min.js"></script>
@@ -488,7 +486,7 @@ var shineFlip = new ShineFlip({
         </div>
 		<div class="row">
 			<div class="zhiduanqingchang">
-				<img  src="/static/images/index/last-zhiduanqingchang.png">
+				<img  src="/static/images/index/loading.gif" data-src="/static/images/index/last-zhiduanqingchang.png">
 				<div  class="zhiduanqingchang-text">
 					<ul>
 						<li class="li1">
@@ -545,75 +543,75 @@ var shineFlip = new ShineFlip({
             <div id="school-section">
 				<div id="youandme" >
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-aa.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-aa.jpg">
 						<div>
 							2018年12月14日，我和你终于变成我们啦，感谢你这么久的坚持和一直以来的付出，未来会有很多磨难和争吵，我们一定要抓紧彼此的手，我们会从校园，走进社会，我们会有我们的小家，你会容忍我的小毛病，替我遮风大雨，我会了解你的喜好，打理好你的衣食住行。亲爱的，我爱你！
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian1.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian1.png">
 					</div>
 
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-a.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-a.jpg">
 						<div>
 							嘻嘻嘻，看我们穿的是什么，对啦，情侣装，哈哈，这是我们的第一件情侣装哦，衣服不够漂亮，只能靠颜值来补啦。这一路走来，磕磕绊绊，吵吵闹闹，还好我们都没有放开彼此的手，值得奖励，要继续保持哦！
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian2.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian2.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-b.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-b.jpg">
 						<div>
 							快看我在吃什么，蛋糕哦，有个爱我的大傻纸，非要一年给我过两次生日，好吧，我就默默接受吧，嘻嘻。但是旁边的小帅哥，你小眼睛咪咪着，是在干嘛呢，比谁眼睛小呐，好吧，你赢了，霍霍。都说两个人在一起久了，就变得相像了，我怎么觉得我的颜值还是甩了你好几条街呢，天生丽质没办法呀，要不你去趟韩国，姐姐资助你。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian3.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian3.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-c.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-c.jpg">
 						<div>
 							我不就是梳了一个俏皮的小辫子嘛，至于的嘛，非要摆拍一下，还要起个名字叫什么猪猪辫，哼，打算即日起把你打入冷宫了，略略略。偷偷侧过头看了看我身边这个大傻纸，认真学习的你还是很有魅力的。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian4.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian4.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-d.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-d.jpg">
 						<div>
 							天气终于变暖和一点啦，那就拍个照吧，景美人更美呀，哎呀，身后的小花花没有出境呀，嘻嘻，不重要不重要，身边的你最重要。你说你，不仅肤白，而且还有小酒窝，羡慕嫉妒呀，但是你丑呀，哈哈，骗你的，我眼中你帅气得很。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian5.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian5.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-e.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-e.jpg">
 						<div>
 							心心念念的师大夜市，我们终于来了！而且还吃到了最爱吃的烤生蚝，只可惜我在专注拍照，忘记了身边喂我的小哥哥，目不转睛盯着生蚝心想：就知道臭美，还不快吃，我口水都要流出来啦。谢谢亲爱的带我来吃好吃的，你说你怎么对我这么好呀。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian6.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian6.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-f.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-f.jpg">
 						<div>
 							学校的挑花开啦，凡是有花的地方，都有阿姨们拍照的身影，赶在花败之前，来张美照吧。希望我们可以一直心中有爱，眼中有景，身边有你。亲爱的，我超爱你的。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian7.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian7.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-g.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-g.jpg">
 						<div>
 							小火锅开吃喽，我的大傻纸又带我出来吃好吃的啦，总这么宠着我，你说被宠坏怎么办，你总说我调的火锅蘸料最好吃，每次都要我帮你调，你说万一有一天，你和别人去吃没人给你调了该怎么办那你就喝火锅汤吧，哈哈。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian8.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian8.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-h.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-h.jpg">
 						<div>
 							俩傻纸，笑的像二百斤的胖子，你说我的樱桃小口，和你的西瓜大口比起来，小巫见大巫呀，哈哈哈，亲爱的，真的希望你以后的每一天，都能开心快乐，亲爱的，看到你开心，我就会更开心的，有时候你幼稚的像个智障一样，有时候又像个大家长一样，只要你是开心的就好。亲爱的，我喜欢你的每个样子。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian9.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian9.png">
 					</div>
 					<div class="school-box">
-						<img src="/static/images/index/school-setion/new-i.jpg">
+						<img src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/new-i.jpg">
 						<div>
 							亲爱的，怎么这么宠我呀，每次去超市，都要让我坐在购物车里推着我走，看到大家异样的眼光，我总是从紧张、害羞变成最后的傲娇、开心、幸福，我是不是招人恨呀，每次去超市，我们都要逛逛油盐酱醋、锅碗瓢盆、生鲜水果...，畅想着我们未来的小家会是什么模样，有一点是肯定的，家中有你，还有我。
 						</div>
-						<img class="scroll-dian" src="/static/images/index/school-setion/dian10.png">
+						<img class="scroll-dian" src="/static/images/index/loading.gif" data-src="/static/images/index/school-setion/dian10.png">
 					</div>
 				</div>
             </div>
@@ -645,16 +643,16 @@ var shineFlip = new ShineFlip({
 			<div class='bigbox'>
 				<div id="accordion" >
 					<ul>
-					<li class="bar01"><span>我和他01</span><img src="/static/images/index/home-setion/new-11.jpg"/></li>
-					<li class="bar02"><span>我和他02</span><img src="/static/images/index/home-setion/new-12.jpg"/></li>
-					<li class="bar03"><span>我和他03</span><img src="/static/images/index/home-setion/new-13.jpg"/></li>
-					<li class="bar04"><span>我和他04</span><img src="/static/images/index/home-setion/new-4.jpg"/></li>
-					<li class="bar05"><span>我和他05</span><img src="/static/images/index/home-setion/new-5.jpg"/></li>
-					<li class="bar06"><span>我和他06</span><img src="/static/images/index/home-setion/new-6.jpg"/></li>
-					<li class="bar07"><span>我和他07</span><img src="/static/images/index/home-setion/new-7.jpg"/></li>
-					<li class="bar08"><span>我和他08</span><img src="/static/images/index/home-setion/new-8.jpg"/></li>
-					<li class="bar09"><span>我和他09</span><img src="/static/images/index/home-setion/new-9.jpg"/></li>
-					<li class="bar10"><span>我和他10</span><img src="/static/images/index/home-setion/new-10.jpg"/></li>
+					<li class="bar01"><span>我和他01</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-11.jpg"/></li>
+					<li class="bar02"><span>我和他02</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-12.jpg"/></li>
+					<li class="bar03"><span>我和他03</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-13.jpg"/></li>
+					<li class="bar04"><span>我和他04</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-4.jpg"/></li>
+					<li class="bar05"><span>我和他05</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-5.jpg"/></li>
+					<li class="bar06"><span>我和他06</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-6.jpg"/></li>
+					<li class="bar07"><span>我和他07</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-7.jpg"/></li>
+					<li class="bar08"><span>我和他08</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-8.jpg"/></li>
+					<li class="bar09"><span>我和他09</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-9.jpg"/></li>
+					<li class="bar10"><span>我和他10</span><img src="/static/images/index/loading.gif" data-src="/static/images/index/home-setion/new-10.jpg"/></li>
 					</ul>
 				</div>
 			</div>
@@ -698,15 +696,15 @@ var shineFlip = new ShineFlip({
 		<div class="threeDXiangceSection" id="DXiangceSection">
 			<div class="di">
 				<div class="z">
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/1.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/2.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/3.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/4.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/5.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/6.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/7.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/8.jpg"></p >
-					<p><img class="threeD-img" src="static/images/index/threeD-xiangce/9.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/1.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/2.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/3.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/4.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/5.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/6.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/7.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/8.jpg"></p >
+					<p><img class="threeD-img" src="/static/images/index/loading.gif" data-src="static/images/index/threeD-xiangce/9.jpg"></p >
 				</div>
 			</div>
 		</div>
@@ -751,15 +749,15 @@ var shineFlip = new ShineFlip({
 				<!-- 无缝滚动 -->
 				<div class="list_con huishenghuishe-video" id="slide">
 					<ul>
-					<li><img src="/static/images/index/scronPhoto/1.jpg" height="170" width="98" alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/2.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/3.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/4.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/5.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/6.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/7.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/8.jpg" height="170" width="98"alt="我和他"></li>
-					<li><img src="/static/images/index/scronPhoto/9.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/1.jpg" height="170" width="98" alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/2.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/3.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/4.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/5.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/6.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/7.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/8.jpg" height="170" width="98"alt="我和他"></li>
+					<li><img src="/static/images/index/loading.gif" data-src="/static/images/index/scronPhoto/9.jpg" height="170" width="98"alt="我和他"></li>
 
 					</ul>
 				</div>
@@ -826,6 +824,23 @@ var shineFlip = new ShineFlip({
 	</div>
 
 <script type="text/javascript">
+/*延时加载*/
+function query(selector) {
+    return Array.from(document.querySelectorAll(selector));
+ }
+ var io = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+  var target = item.target;
+  if(target.getAttribute('src') == '/static/images/index/loading.gif') {
+     target.src = target.getAttribute('data-src');
+  }
+    })
+ });
+ query('img').forEach(function(item) {
+    io.observe(item);
+ });
+/*延时加载*/
+
 /*3D相册*/
    //给每个p标签设置位置  //300控制着两个P之间的距离   //40控制着P个数   p_num=360/40
     function setPs() {
@@ -902,7 +917,7 @@ var shineFlip = new ShineFlip({
 			 zDegDistance = zDegNow - (xDistance / 10);
 			 zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
 			 xDegDistance = xDegNow - (yDistance / 10);
-			 xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+			 xDegDistance = xDegDistance > 100 ? 100 : xDegDistance < 65 ? 65 : xDegDistance;
 			 xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
 			 break;
 			case "touchend":
@@ -918,7 +933,7 @@ var shineFlip = new ShineFlip({
 			  zDegDistance = zDegDistance - (speedX * 10);
 			  zBox.style.transform = 'rotatez(' + zDegDistance + 'deg)';
 			  xDegDistance = xDegDistance - (speedY * 10);
-			  xDegDistance = xDegDistance > 179 ? 179 : xDegDistance < 1 ? 1 : xDegDistance;
+			  xDegDistance = xDegDistance > 100 ? 100 : xDegDistance < 65 ? 65 : xDegDistance;
 			  xBox.style.transform = 'translate(-50%,-50%) rotatex(' + xDegDistance + 'deg)';
 			  //记录当前角度的值更新
 			  xDegNow = xDegDistance;
