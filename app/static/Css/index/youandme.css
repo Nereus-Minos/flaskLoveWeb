@@ -53,3 +53,67 @@
 }*/
 
 
+/*************letter*************************/
+.rsvp-area .container #letter {
+
+    margin: 10px 0px 15px 0px;
+    padding: 10px 10px 0px;
+    box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 3px 57px 0 rgba(0,0,0,0.2);
+    overflow:hidden;
+    zoom:1;
+}
+
+.rsvp-area .container #letter-left {
+    position: absolute;
+    top: 390px;
+    left:5px;
+    padding:0px;
+    border:0px;
+    width:28px;
+}
+.rsvp-area .container #letter-right {
+    position: absolute;
+    top: 390px;
+    left:345px;
+    padding:0px;
+    border:0px;
+    width:28px;
+}
+
+
+.rsvp-area .container #letter #letter-section {
+
+    overflow: hidden;
+    height: 220px;
+}
+
+.rsvp-area .container #letter #letter-section #you-me{
+    width: 345px; /*根据school来的*/
+    background: #eee;
+    white-space: nowrap;/*文本不会换行，文本会在在同一行上继续*/
+}
+
+.rsvp-area .container #letter #letter-section #you-me .letter-box {
+    width: 100%;
+    height: 210px;
+    padding:5px;
+    background: #eee;
+    display: inline-block;/*行内块元素*/
+}
+
+.rsvp-area .container #letter #letter-section #you-me .letter-box img{
+ width:40%;
+ float:left;
+}
+
+.rsvp-area .container #letter #letter-section #you-me .letter-box div{
+  overflow-y: scroll;
+ width:90%;
+ height: 190px;
+ float:left;
+ margin-left: 10px;
+ white-space:normal; word-break:break-all;
+}
+
+/*************letter*************************/

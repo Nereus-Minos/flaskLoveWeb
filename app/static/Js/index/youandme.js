@@ -74,3 +74,29 @@ function getT3d(elem, ename) {
     else if (ename == "z") return carr[2];
     else return "";
 }
+
+
+/********************letter***************************/
+/********************letter***************************/
+var moveEle_letter = d[g]('you-me');
+var section_show_width_letter = parseInt($("#you-me").width())+5;
+var maxMoveWidth_letter = (-9) * section_show_width_letter;
+function left_button(){
+    var now_position_x = parseInt(getT3d(moveEle_letter, "x"));
+    if(0 !=  now_position_x)
+    {
+        var next_position_x = now_position_x + section_show_width_letter;
+        moveEle_letter.style.webkitTransform = 'translate(' + next_position_x + 'px, ' + 0 + 'px)';
+    }
+}
+
+function right_button(){
+    var now_position_x = parseInt(getT3d(moveEle_letter, "x"));
+    if(maxMoveWidth_letter <  now_position_x)
+    {
+        var next_position_x = now_position_x - section_show_width_letter;
+        moveEle_letter.style.webkitTransform = 'translate(' + next_position_x + 'px, ' + 0 + 'px)';
+    }
+}
+/********************letter***************************/
+/********************letter***************************/
