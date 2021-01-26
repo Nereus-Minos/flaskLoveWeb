@@ -1173,7 +1173,7 @@ var shineFlip = new ShineFlip({
                                 <textarea name="message" rows="5" class="form-control" placeholder="说些什么吧..." id="message"></textarea>
                             </div>
                             <div class="rsvp-submit-button text-center">
-                                <button type="button" class="btn section-button text-uppercase">发表</button>
+                                <button type="button" class="btn section-button text-uppercase" id="bless_form">发表</button>
                             </div>
                         </div>
                     </div>
@@ -1183,6 +1183,24 @@ var shineFlip = new ShineFlip({
         </div>
     </div>
 </section>
+	
+<script type="text/javascript">
+	$("#bless_form").click(function(){
+		var name = $("#name").val();
+		var bless_txt = $("#message").val();
+		console.log("name: " + name);
+		console.log("bless_txt: " + bless_txt);
+		$.ajax({
+			url:"/bless_req",
+			type:'GET',
+			data: {'name':name,'bless_txt':bless_txt},   // 这个序列化传递很重要
+			dataType:'json',
+			success:function (resp) {
+				console.log(resp);
+			}
+		})
+	});
+</script>
 <!--	祝福-->
 
 	<div class='container-fluid' style=" background-color: #82a6f5;">
